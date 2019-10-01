@@ -4,13 +4,34 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField, Tooltip("Max speed, in units per second, that the character moves.")]
+    float speed = 9;
 
-    public float m_speed = 5.0f;
+    [SerializeField, Tooltip("Acceleration while grounded.")]
+    float walkAcceleration = 75;
+
+    [SerializeField, Tooltip("Acceleration while in the air.")]
+    float airAcceleration = 30;
+
+    [SerializeField, Tooltip("Deceleration applied when character is grounded and not attempting to move.")]
+    float groundDeceleration = 70;
+
+    [SerializeField, Tooltip("Max height the character will jump regardless of gravity")]
+    float jumpHeight = 4;
+
+    [SerializeField, Tooltip("Gravity affecting the character")]
+    float gravityValue = -2;
+
+    private BoxCollider2D boxCollider;
+
+    private Vector2 velocity;
+
     public GameObject prefSpear;
     public GameObject spear;
     Spear SpearScript;
 
     private bool grounded;
+
     private bool SpearInHand = true;
     private bool SpawnOrRecallSpear;
 
@@ -20,22 +41,58 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
+
+        transform.Translate(velocity * Time.deltaTime);
+
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        if (moveInput != 0)
+        {
+            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, walkAcceleration * Time.deltaTime);
+        }
+        else
+        {
+            velocity.x = Mathf.MoveTowards(velocity.x, 0, groundDeceleration * Time.deltaTime);
+        }
+
+
         transform.rotation = new Quaternion(0, 0, 0,0);
         float horizontal = Input.GetAxis("Horizontal");
 
-        if (Input.GetKey(KeyCode.A) | Input.GetKey(KeyCode.D))
+
+        if (grounded)
         {
-            transform.Translate(Vector3.right * horizontal * m_speed * Time.deltaTime);// A D
+            velocity.y = 0;
+
+            // Jumping code we implemented earlier—no changes were made here.
+            if (Input.GetButtonDown("Jump"))
+            {
+                // Calculate the velocity required to achieve the target jump height.
+                velocity.y = Mathf.Sqrt(2 * jumpHeight * Mathf.Abs(Physics2D.gravity.y));
+            }
         }
 
-        // Jump
-        if (Input.GetKey(KeyCode.Space))
+        velocity.y += gravityValue * Time.deltaTime;
+
+        grounded = false;
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(transform.position, boxCollider.size, 0);
+        foreach (Collider2D hit in hits)
         {
-            if (grounded == true)
+            ColliderDistance2D colliderDistance = hit.Distance(boxCollider);
+
+            if (hit == boxCollider)
+                continue;
+
+           
+
+            if (colliderDistance.isOverlapped)
             {
-                GetComponent<Rigidbody>().velocity += new Vector3(0, 7, 0);
-                GetComponent<Rigidbody>().AddForce(Vector3.up * 50);
-                grounded = false;
+                transform.Translate(colliderDistance.pointA - colliderDistance.pointB);
+            }
+
+            if (Vector2.Angle(colliderDistance.normal, Vector2.up) < 90 && velocity.y < 0)
+            {
+                grounded = true;
             }
         }
     }
