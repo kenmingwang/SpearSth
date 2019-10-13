@@ -25,6 +25,8 @@ public class Player : MonoBehaviour
 
     private bool facingRight;
 
+    private bool SpearInHand;
+
     /// <summary>
     /// Set to true when the character intersects a collider beneath
     /// them in the previous frame.
@@ -52,21 +54,44 @@ public class Player : MonoBehaviour
             }
         }
 
-        float acceleration = grounded ? walkAcceleration : airAcceleration;
-        float deceleration = grounded ? groundDeceleration : 0;
-
         if (moveInput != 0)
         {
-            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, acceleration * Time.deltaTime);
+            velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, walkAcceleration * Time.deltaTime);
         }
         else
         {
-            velocity.x = Mathf.MoveTowards(velocity.x, 0, deceleration * Time.deltaTime);
+            velocity.x = Mathf.MoveTowards(velocity.x, 0, groundDeceleration * Time.deltaTime);
         }
 
-        velocity.y += Physics2D.gravity.y * Time.deltaTime;
+        if (!grounded)
+        {
+            velocity.y += Physics2D.gravity.y * Time.deltaTime;
+        }
 
         transform.Translate(velocity * Time.deltaTime);
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            /*
+            if (SpearInHand)
+            {
+
+                float x = transform.position.x + 2;
+                Vector spwanPos = new Vector3(x, transform.position.y);
+                spear = Instantiate(prefSpear, spwanPos, Quaternion.Euler(0, 0, -90));
+                SpearScript = spear.GetComponent<Spear>();
+                SpearScript.TriggerThrow();
+                SpawnOrRecallSpear = true;
+                SpearInHand = false;
+            }
+            else if (!SpearInHand && SpearScript.GetWallStatus())
+            {
+                SpearScript.TriggerRecall();
+                SpawnOrRecallSpear = false;
+            }
+
+            */
+        }
 
         grounded = false;
 

@@ -70,8 +70,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 947
-  m_MinSize: {x: 234, y: 494}
-  m_MaxSize: {x: 10004, y: 14044}
+  m_MinSize: {x: 234, y: 472}
+  m_MaxSize: {x: 10004, y: 14022}
   vertical: 1
   controlID: 75
 --- !u!114 &4
@@ -142,8 +142,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 713, y: 494}
-  m_MaxSize: {x: 18008, y: 14044}
+  m_MinSize: {x: 711, y: 472}
+  m_MaxSize: {x: 18006, y: 14022}
   vertical: 0
   controlID: 31
 --- !u!114 &7
@@ -211,8 +211,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 440
-  m_MinSize: {x: 204, y: 222}
-  m_MaxSize: {x: 4004, y: 4022}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -238,8 +238,8 @@ MonoBehaviour:
     y: 0
     width: 277
     height: 947
-  m_MinSize: {x: 277, y: 72}
-  m_MaxSize: {x: 4002, y: 4022}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -352,9 +352,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ae2d0000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 5cfbffffb62f0000
+      m_ExpandedIDs: 5cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -667,9 +667,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -10.712392, y: 1.416815, z: -4.1014385}
+    m_Target: {x: -9.500428, y: 1.6016945, z: -4.1015625}
     speed: 2
-    m_Value: {x: -10.712392, y: 1.416815, z: -4.1014385}
+    m_Value: {x: -9.500428, y: 1.6016945, z: -4.1015625}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
