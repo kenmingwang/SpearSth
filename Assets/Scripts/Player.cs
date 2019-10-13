@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
 
         if (grounded)
         {
+            Debug.Log("gotem");
             velocity.y = 0;
 
             if (Input.GetButtonDown("Jump"))
@@ -57,6 +58,7 @@ public class Player : MonoBehaviour
         if (moveInput != 0)
         {
             velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, walkAcceleration * Time.deltaTime);
+            //Debug.Log("Right");
         }
         else
         {
@@ -66,7 +68,7 @@ public class Player : MonoBehaviour
         if (!grounded)
         {
             velocity.y += Physics2D.gravity.y * Time.deltaTime;
-        }
+        } 
 
         transform.Translate(velocity * Time.deltaTime);
 
