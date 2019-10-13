@@ -10,6 +10,7 @@ public class Spear : MonoBehaviour
     private bool isInWall = false;
     private bool isThrowTriggered = false;
     private bool isRecallTriggered = false;
+    private Vector3 staticPos;
 
 
     // Use this for initialization
@@ -22,34 +23,35 @@ public class Spear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isThrowTriggered)
         {
-            GetComponent<Rigidbody>().AddForce(transform.up * 100);
-        }
-
-        if (transform.position.x < Player.transform.position.x - 10)
-        {
-            Destroy(gameObject);
-            Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
         }
        
         else if (isRecallTriggered)
         {
             transform.LookAt(Player.transform);
             transform.Rotate(transform.rotation.x, 90, 90);
-            GetComponent<Rigidbody>().AddForce(transform.up * 100);
+            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
         }
         
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Hit Player2D");
+            Destroy(gameObject);
+            Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
         }
     }
 
