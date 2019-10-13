@@ -42,9 +42,15 @@ public class PhysicsObject : MonoBehaviour
     {
         targetVelocity = Vector2.zero;
         ComputeVelocity();
+        CheckSpearStatus();
     }
 
     protected virtual void ComputeVelocity()
+    {
+
+    }
+
+    protected virtual void CheckSpearStatus()
     {
 
     }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,7 +26,23 @@ public class Player : MonoBehaviour
 
     private bool facingRight;
 
-    private bool SpearInHand;
+    internal void SetSpearInHand()
+    {
+        throw new NotImplementedException();
+    }
+
+
+    /* Spear related fields */
+
+    public GameObject prefSpear;
+
+    public GameObject spear;
+
+    private GameObject Spear;
+
+    Spear SpearScript;
+    private bool SpearInHand = true;
+    private bool SpawnOrRecallSpear;
 
     /// <summary>
     /// Set to true when the character intersects a collider beneath
@@ -36,6 +53,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
+        prefSpear = Resources.Load("Spear") as GameObject;
     }
 
     private void Update()
@@ -58,7 +76,7 @@ public class Player : MonoBehaviour
         if (moveInput != 0)
         {
             velocity.x = Mathf.MoveTowards(velocity.x, speed * moveInput, walkAcceleration * Time.deltaTime);
-            //Debug.Log("Right");
+            Debug.Log("Right");
         }
         else
         {
@@ -72,28 +90,7 @@ public class Player : MonoBehaviour
 
         transform.Translate(velocity * Time.deltaTime);
 
-        if (Input.GetButtonDown("Fire1"))
-        {
-            /*
-            if (SpearInHand)
-            {
 
-                float x = transform.position.x + 2;
-                Vector spwanPos = new Vector3(x, transform.position.y);
-                spear = Instantiate(prefSpear, spwanPos, Quaternion.Euler(0, 0, -90));
-                SpearScript = spear.GetComponent<Spear>();
-                SpearScript.TriggerThrow();
-                SpawnOrRecallSpear = true;
-                SpearInHand = false;
-            }
-            else if (!SpearInHand && SpearScript.GetWallStatus())
-            {
-                SpearScript.TriggerRecall();
-                SpawnOrRecallSpear = false;
-            }
-
-            */
-        }
 
         grounded = false;
 
