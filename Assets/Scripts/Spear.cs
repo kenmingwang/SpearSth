@@ -17,6 +17,7 @@ public class Spear : MonoBehaviour
     void Start()
     {
         Player = GameObject.Find("Player");
+
         Vector2 pos = transform.position;
     }
 
@@ -24,18 +25,23 @@ public class Spear : MonoBehaviour
     void Update()
     {
 
+      
+
+    }
+
+    private void FixedUpdate()
+    {
         if (isThrowTriggered)
         {
             GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
         }
-       
+
         else if (isRecallTriggered)
         {
             transform.LookAt(Player.transform);
             transform.Rotate(transform.rotation.x, 90, 90);
             GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
         }
-        
 
     }
 
@@ -52,10 +58,16 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Player2D");
             Destroy(gameObject);
             Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
-        } else if(collision.gameObject.tag == "Enemy")
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
         {
+            collision.gameObject.GetComponent<EnemyParent>().Damaged(collision.gameObject);
             Debug.Log("Hit Enemy");
-            Destroy(collision.gameObject);
+
         }
     }
 

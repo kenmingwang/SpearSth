@@ -14,9 +14,9 @@ public class EnemyWalker : MonoBehaviour
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
-        RaycastHit2D groundInfo = Physics2D.Raycast(groundDectecton.position, Vector2.down, 1f);
+        RaycastHit2D groundInfoDown = Physics2D.Raycast(groundDectecton.position, Vector2.down, 0.5f);
 
-        if(groundInfo.collider == false)
+        if (!groundInfoDown.collider )
         {
             if (facingRight)
             {
