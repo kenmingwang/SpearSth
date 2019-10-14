@@ -6,7 +6,7 @@ public class EnemyWalker : MonoBehaviour
 {
     public float speed;
 
-    private bool movingRight = true;
+    private bool facingRight = true;
 
     public Transform groundDectecton;
 
@@ -18,24 +18,25 @@ public class EnemyWalker : MonoBehaviour
 
         if(groundInfo.collider == false)
         {
-            if (movingRight)
+            if (facingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
-                movingRight = false;
+                facingRight = false;
             } else
             {
                 transform.eulerAngles = new Vector3(0, -0, 0);
-                movingRight = true;
+                facingRight = true;
             }
         }
     }
 
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.gameObject.tag == "Spear")
+    private void OnCollisionEnter2D(Collision2D collision)
+    { 
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("hit");
+            Debug.Log("Enemy hit player");
             Destroy(gameObject);
-        }
+           // Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+        }     
     }
 }
