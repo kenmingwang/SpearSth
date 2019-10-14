@@ -52,6 +52,10 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Player2D");
             Destroy(gameObject);
             Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+        } else if(collision.gameObject.tag == "Enemy")
+        {
+            Debug.Log("Hit Enemy");
+            Destroy(collision.gameObject);
         }
     }
 
