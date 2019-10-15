@@ -8,6 +8,7 @@ TagManager:
   - Spear
   - Ground
   - Enemy
+  - Switch
   layers:
   - Default
   - TransparentFX

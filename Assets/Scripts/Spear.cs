@@ -38,6 +38,7 @@ public class Spear : MonoBehaviour
 
         else if (isRecallTriggered)
         {
+            //Add turn off collision code here
             transform.LookAt(Player.transform);
             transform.Rotate(transform.rotation.x, 90, 90);
             GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
@@ -52,12 +53,25 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
+        } else if (collision.gameObject.tag == "Switch")
+        {
+            collision.gameObject.GetComponent<EnvSwitch>().SwitchPressed();
         }
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Hit Player2D");
             Destroy(gameObject);
             Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+        }
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        Debug.Log("Dank Release");
+        if (collision.gameObject.tag == "Switch")
+        {
+            collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
         }
     }
 
@@ -68,7 +82,7 @@ public class Spear : MonoBehaviour
             collision.gameObject.GetComponent<EnemyParent>().Damaged(collision.gameObject);
             Debug.Log("Hit Enemy");
 
-        }
+        } 
     }
 
 
