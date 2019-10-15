@@ -10,18 +10,28 @@ public class EnemyWalker : MonoBehaviour
 
     public Transform groundDectecton;
 
+    private RaycastHit2D wallInfoForeward;
+
     void Update()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfoDown = Physics2D.Raycast(groundDectecton.position, Vector2.down, 0.5f);
 
-        if (!groundInfoDown.collider )
+        if (facingRight)
+        {
+            wallInfoForeward = Physics2D.Raycast(groundDectecton.position, Vector2.right, 0.01f);
+        } else
+        {
+            wallInfoForeward = Physics2D.Raycast(groundDectecton.position, Vector2.left, 0.01f);
+        }
+        if (!groundInfoDown.collider || wallInfoForeward.collider)
         {
             if (facingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
                 facingRight = false;
+
             } else
             {
                 transform.eulerAngles = new Vector3(0, -0, 0);
