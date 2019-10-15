@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 8902981709484619474}
   - component: {fileID: 8902981709484619477}
   - component: {fileID: 8902981709484619472}
+  - component: {fileID: 4686815892852222779}
   m_Layer: 0
   m_Name: WalkingEnemy
   m_TagString: Enemy
@@ -123,7 +124,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -153,3 +154,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   groundDectecton: {fileID: 8902981709010874221}
+--- !u!114 &4686815892852222779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8902981709484619476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7992abf6cfa62a846882a6a58e1d8413, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
