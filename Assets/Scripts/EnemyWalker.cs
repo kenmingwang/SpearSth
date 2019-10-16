@@ -12,7 +12,7 @@ public class EnemyWalker : MonoBehaviour
 
     private RaycastHit2D wallInfoForeward;
 
-    void Update()
+    void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
@@ -40,13 +40,13 @@ public class EnemyWalker : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    { 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Enemy hit player");
-            Destroy(gameObject);
-           // Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
-        }     
+            GameObject.Find("Player").GetComponent<PhysicsPlayer>().Die();
+            // Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+        }
     }
 }

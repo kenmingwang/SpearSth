@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /*
  * Ok so all of this code (besides spear spawning is stolen from https://learn.unity.com/tutorial/live-session-2d-platformer-character-controller
@@ -12,6 +13,10 @@ public class PhysicsPlayer : PhysicsObject
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
 
+    public AudioClip throwAudio;
+    
+    AudioSource audioSource;
+
     /* Spear related fields */
 
     private GameObject prefSpear;
@@ -20,6 +25,7 @@ public class PhysicsPlayer : PhysicsObject
     Spear SpearScript;
     private bool SpearInHand = true;
     private bool SpawnOrRecallSpear;
+    private bool PlayerAlive = true;
 
 
     private SpriteRenderer spriteRenderer;
@@ -30,6 +36,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         prefSpear = Resources.Load("Spear") as GameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
         // animator = GetComponent<Animator>();
     }
 
@@ -84,18 +91,19 @@ public class PhysicsPlayer : PhysicsObject
                 {
                     x = transform.position.x - 1;
                     spwanPos = new Vector3(x, transform.position.y);
-                    angle = Quaternion.Euler(0, 0, 90);
+                    angle = Quaternion.Euler(0, 0,180);
                 }
                 else
                 {
                     x = transform.position.x + 1;
                     spwanPos = new Vector3(x, transform.position.y);
-                    angle = Quaternion.Euler(0, 0, -90);
+                    angle = Quaternion.Euler(0, 0, 0);
 
                 }
                 Spear = Instantiate(prefSpear, spwanPos, angle);
                 SpearScript = Spear.GetComponent<Spear>();
                 SpearScript.TriggerThrow();
+
                 SpawnOrRecallSpear = true;
                 SpearInHand = false;
 
@@ -105,9 +113,22 @@ public class PhysicsPlayer : PhysicsObject
                 SpearScript.TriggerRecall();
                 SpawnOrRecallSpear = false;
             }
-
-
         }
+    }
+
+    protected override void CheckPlayerStatus()
+    {
+
+    }
+
+    public void Die()
+    {
+        PlayerAlive = false;
+    }
+
+    public bool IsAlive()
+    {
+        return PlayerAlive;
     }
 
 

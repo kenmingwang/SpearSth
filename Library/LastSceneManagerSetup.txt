@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Latest with sound.unity
+- path: Assets/Scenes/biraj_newscene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

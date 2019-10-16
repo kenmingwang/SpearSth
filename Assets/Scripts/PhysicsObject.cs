@@ -42,7 +42,9 @@ public class PhysicsObject : MonoBehaviour
     {
         targetVelocity = Vector2.zero;
         ComputeVelocity();
+        CheckPlayerStatus();
         CheckSpearStatus();
+
     }
 
     protected virtual void ComputeVelocity()
@@ -51,6 +53,11 @@ public class PhysicsObject : MonoBehaviour
     }
 
     protected virtual void CheckSpearStatus()
+    {
+
+    }
+
+    protected virtual void CheckPlayerStatus()
     {
 
     }
@@ -73,6 +80,10 @@ public class PhysicsObject : MonoBehaviour
         move = Vector2.up * deltaPosition.y;
 
         Movement(move, true);
+
+
+
+
     }
 
     void Movement(Vector2 move, bool yMovement)

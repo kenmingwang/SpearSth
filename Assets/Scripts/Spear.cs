@@ -7,17 +7,30 @@ public class Spear : MonoBehaviour
     Vector3 fwd;
 
     public GameObject Player;
+    public int SpearSpeed=75;
+
+    public AudioClip spearHit;
+    
+    public AudioClip throwAudio;
+    AudioSource audioSource;
+
+    private Vector3 wallPos;
+    private Quaternion wallRot;
     private bool isInWall = false;
     private bool isThrowTriggered = false;
     private bool isRecallTriggered = false;
     private Vector3 staticPos;
 
-
-    // Use this for initialization
-    void Start()
+    private void Awake()
     {
         Player = GameObject.Find("Player");
 
+        audioSource = GetComponent<AudioSource>();
+
+    }
+    // Use this for initialization
+    void Start()
+    {
         Vector2 pos = transform.position;
     }
 
@@ -25,7 +38,11 @@ public class Spear : MonoBehaviour
     void Update()
     {
 
-      
+        if (isInWall)
+        {
+            transform.position = wallPos;
+            transform.rotation = wallRot;
+        }
 
     }
 
@@ -33,16 +50,17 @@ public class Spear : MonoBehaviour
     {
         if (isThrowTriggered)
         {
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+
+            GetComponent<Rigidbody2D>().AddForce(transform.right * 100);
         }
 
         else if (isRecallTriggered)
         {
             //Add turn off collision code here
-            transform.LookAt(Player.transform);
-            transform.Rotate(transform.rotation.x, 90, 90);
-            
-            GetComponent<Rigidbody2D>().AddForce(transform.up * 100);
+             transform.LookAt(Player.transform);
+            transform.Rotate(0, 90, -180);
+
+            GetComponent<Rigidbody2D>().AddForce(transform.right * 100);
         }
 
     }
@@ -51,12 +69,17 @@ public class Spear : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            wallPos = transform.position;
+            wallRot = transform.rotation;
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
+
             SetIsTrigger();
         } else if (collision.gameObject.tag == "Switch")
         {
+            wallPos = transform.position;
+            wallRot = transform.rotation;
             Debug.Log("Hit Switch"); 
             collision.gameObject.GetComponent<EnvSwitch>().SwitchPressed();
             isInWall = true;
@@ -74,9 +97,10 @@ public class Spear : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Dank Release");
+       
         if (collision.gameObject.tag == "Switch")
         {
+            Debug.Log("Dank Release");
             collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
 
         }
@@ -87,6 +111,8 @@ public class Spear : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyParent>().Damaged(collision.gameObject);
+
+            audioSource.PlayOneShot(spearHit, 0.4f);
             Debug.Log("Hit Enemy");
 
         }
@@ -111,6 +137,8 @@ public class Spear : MonoBehaviour
 
     public void TriggerThrow()
     {
+        audioSource.PlayOneShot(throwAudio, 0.4f);
+
         isThrowTriggered = true;
     }
 
@@ -119,6 +147,7 @@ public class Spear : MonoBehaviour
         if (isInWall == true)
         {
             isInWall = false;
+            
         }
         isRecallTriggered = true;
     }

@@ -44,7 +44,7 @@ public class EnemyParent : MonoBehaviour
         CalculateHealth();
 
         //Differs every enemy
-        offset = new Vector2(0, 50);
+        offset = new Vector2(0, 100);
 
     }
 
@@ -55,15 +55,7 @@ public class EnemyParent : MonoBehaviour
         HealthBarFollow();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Enemy hit player");
-            Destroy(gameObject);
-            // Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
-        }
-    }
+
 
     public void Damaged(GameObject gameObj)
     {
