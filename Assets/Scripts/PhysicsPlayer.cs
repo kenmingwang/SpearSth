@@ -90,13 +90,13 @@ public class PhysicsPlayer : PhysicsObject
                 if (spriteRenderer.flipX)
                 {
                     x = transform.position.x - 1;
-                    spwanPos = new Vector3(x, transform.position.y);
+                    spwanPos = new Vector3(x, transform.position.y + 0.4f);
                     angle = Quaternion.Euler(0, 0,180);
                 }
                 else
                 {
                     x = transform.position.x + 1;
-                    spwanPos = new Vector3(x, transform.position.y);
+                    spwanPos = new Vector3(x, transform.position.y + 0.4f);
                     angle = Quaternion.Euler(0, 0, 0);
 
                 }
