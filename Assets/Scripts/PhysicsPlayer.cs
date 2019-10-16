@@ -76,13 +76,29 @@ public class PhysicsPlayer : PhysicsObject
 
             if (SpearInHand)
             {
-                float x = transform.position.x + 2;
-                Vector3 spwanPos = new Vector3(x, transform.position.y);
-                Spear = Instantiate(prefSpear, spwanPos, Quaternion.Euler(0, 0, -90));
+                float x = 0f;
+                Vector3 spwanPos = new Vector3();
+                Quaternion angle = new Quaternion();
+                // face left
+                if (spriteRenderer.flipX)
+                {
+                    x = transform.position.x - 1;
+                    spwanPos = new Vector3(x, transform.position.y);
+                    angle = Quaternion.Euler(0, 0, 90);
+                }
+                else
+                {
+                    x = transform.position.x + 1;
+                    spwanPos = new Vector3(x, transform.position.y);
+                    angle = Quaternion.Euler(0, 0, -90);
+
+                }
+                Spear = Instantiate(prefSpear, spwanPos, angle);
                 SpearScript = Spear.GetComponent<Spear>();
                 SpearScript.TriggerThrow();
                 SpawnOrRecallSpear = true;
                 SpearInHand = false;
+
             }
             else if (!SpearInHand && SpearScript.GetWallStatus())
             {

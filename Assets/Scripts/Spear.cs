@@ -55,7 +55,10 @@ public class Spear : MonoBehaviour
             isThrowTriggered = false;
         } else if (collision.gameObject.tag == "Switch")
         {
+            Debug.Log("Hit Switch"); 
             collision.gameObject.GetComponent<EnvSwitch>().SwitchPressed();
+            isInWall = true;
+            isThrowTriggered = false;
         }
         if (collision.gameObject.tag == "Player")
         {
@@ -72,6 +75,7 @@ public class Spear : MonoBehaviour
         if (collision.gameObject.tag == "Switch")
         {
             collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
+
         }
     }
 
