@@ -51,7 +51,7 @@ public class Spear : MonoBehaviour
         if (isThrowTriggered)
         {
 
-            GetComponent<Rigidbody2D>().AddForce(transform.right * 100);
+            GetComponent<Rigidbody2D>().AddForce(transform.right * SpearSpeed);
         }
 
         else if (isRecallTriggered)
@@ -60,7 +60,7 @@ public class Spear : MonoBehaviour
              transform.LookAt(Player.transform);
             transform.Rotate(0, 90, -180);
 
-            GetComponent<Rigidbody2D>().AddForce(transform.right * 100);
+            GetComponent<Rigidbody2D>().AddForce(transform.right * SpearSpeed);
         }
 
     }
@@ -85,15 +85,10 @@ public class Spear : MonoBehaviour
             isInWall = true;
             isThrowTriggered = false;
             SetIsTrigger();
-        }
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Hit Player2D");
-            Destroy(gameObject);
-            Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
-        }
-        
+        }       
     }
+
+    
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -104,10 +99,6 @@ public class Spear : MonoBehaviour
             collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
 
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<EnemyParent>().Damaged(collision.gameObject);
@@ -123,6 +114,13 @@ public class Spear : MonoBehaviour
             Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+    }
+
 
     private void SetIsTrigger()
     {
