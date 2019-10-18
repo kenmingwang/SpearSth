@@ -7,27 +7,25 @@ public class EnvSwitch : MonoBehaviour
     [SerializeField]
     public GameObject doorAttached;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    private bool doorDown = true;
 
     public void SwitchPressed()
     {
-        doorAttached = GameObject.Find("Door");
-        Debug.Log("Hit button");
-        doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
+        if (doorDown)
+        {
+            doorAttached = GameObject.Find("Door");
+            //Debug.Log("Hit button");
+            doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
+            doorDown = false;
+        }
     }
 
     public void SwitchReleased()
     {
-        doorAttached.transform.Translate(Vector2.left * 100 * Time.deltaTime);
+        if (!doorDown)
+        {
+            doorAttached.transform.Translate(Vector2.left * 100 * Time.deltaTime);
+            doorDown = true;
+        }
     }
 }
