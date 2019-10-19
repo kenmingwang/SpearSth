@@ -140,7 +140,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 dir = flipX ? Vector2.right : Vector2.left;
         // Check if too close to wall
-        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 1.5f, layerMask);
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 2f, layerMask);
         Debug.DrawRay(transform.position, dir, Color.red);
         if (Hit)
         {
@@ -149,6 +149,4 @@ public class PhysicsPlayer : PhysicsObject
         }
         return false;
     }
-
-
 }

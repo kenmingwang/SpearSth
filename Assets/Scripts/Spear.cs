@@ -74,8 +74,8 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
-
-            SetIsTrigger();
+            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+            GetComponent<BoxCollider2D>().size = new Vector2(2.8f, 0.5f);
         } else if (collision.gameObject.tag == "Switch")
         {
             wallPos = transform.position;
@@ -84,8 +84,8 @@ public class Spear : MonoBehaviour
             collision.gameObject.GetComponent<EnvSwitch>().SwitchPressed();
             isInWall = true;
             isThrowTriggered = false;
-            SetIsTrigger();
-        }       
+        }
+
     }
 
     
@@ -107,6 +107,12 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Enemy");
 
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Hit Player2D");
@@ -115,16 +121,12 @@ public class Spear : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-
-
-    }
-
 
     private void SetIsTrigger()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
+        GetComponent<BoxCollider2D>().offset = new Vector2(1f, 0f);
+        GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.2f);
     }
 
 
@@ -145,7 +147,7 @@ public class Spear : MonoBehaviour
         if (isInWall == true)
         {
             isInWall = false;
-            
+            SetIsTrigger();
         }
         isRecallTriggered = true;
     }
