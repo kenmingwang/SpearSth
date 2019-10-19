@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 76522642}
   - component: {fileID: 76522641}
   - component: {fileID: 76522640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fifth_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -306,6 +306,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 4327068529770910588, guid: 3ea4e258e322742408c8d655571fa4ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4327068529770910591, guid: 3ea4e258e322742408c8d655571fa4ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -410,7 +415,7 @@ GameObject:
   - component: {fileID: 229444951}
   - component: {fileID: 229444950}
   - component: {fileID: 229444949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sixth_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -595,7 +600,7 @@ GameObject:
   - component: {fileID: 261620090}
   - component: {fileID: 261620089}
   - component: {fileID: 261620088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: top_safety_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -791,7 +796,7 @@ GameObject:
   - component: {fileID: 330740886}
   - component: {fileID: 330740885}
   - component: {fileID: 330740884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: seventh_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1071,7 +1076,7 @@ GameObject:
   - component: {fileID: 680481661}
   - component: {fileID: 680481660}
   - component: {fileID: 680481659}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1173,7 +1178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 738232186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1221,7 +1226,7 @@ GameObject:
   - component: {fileID: 769653864}
   - component: {fileID: 769653863}
   - component: {fileID: 769653862}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: first_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1439,7 +1444,7 @@ GameObject:
   - component: {fileID: 1377082213}
   - component: {fileID: 1377082212}
   - component: {fileID: 1377082211}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: left_safety_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1544,7 +1549,7 @@ GameObject:
   - component: {fileID: 1398604262}
   - component: {fileID: 1398604261}
   - component: {fileID: 1398604260}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ceiling
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1655,7 +1660,7 @@ GameObject:
   - component: {fileID: 1569929159}
   - component: {fileID: 1569929158}
   - component: {fileID: 1569929157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: start_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1826,7 +1831,7 @@ GameObject:
   - component: {fileID: 1672558264}
   - component: {fileID: 1672558263}
   - component: {fileID: 1672558262}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: second_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1931,7 +1936,7 @@ GameObject:
   - component: {fileID: 1768027293}
   - component: {fileID: 1768027292}
   - component: {fileID: 1768027291}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: third_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2111,7 +2116,7 @@ GameObject:
   - component: {fileID: 1985038258}
   - component: {fileID: 1985038257}
   - component: {fileID: 1985038256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: fourth_platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2198,7 +2203,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985038255}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.2661257, y: 7.474794, z: 3.370962}
+  m_LocalPosition: {x: -3.2661257, y: 8.35, z: 3.370962}
   m_LocalScale: {x: 4.525, y: 1.2875, z: 1}
   m_Children: []
   m_Father: {fileID: 738232186}
@@ -2216,7 +2221,7 @@ GameObject:
   - component: {fileID: 1997230940}
   - component: {fileID: 1997230939}
   - component: {fileID: 1997230938}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: end_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2321,7 +2326,7 @@ GameObject:
   - component: {fileID: 2077820169}
   - component: {fileID: 2077820168}
   - component: {fileID: 2077820167}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: door_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2426,7 +2431,7 @@ GameObject:
   - component: {fileID: 2108366167}
   - component: {fileID: 2108366166}
   - component: {fileID: 2108366165}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: right_safety_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2531,6 +2536,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4519029303321036489, guid: 64cd5a91825fc46429cca0de691945ec,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4519029303321036490, guid: 64cd5a91825fc46429cca0de691945ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2618,12 +2628,12 @@ PrefabInstance:
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -60.4
+      value: -59.25
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.25
+      value: 6.97
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
@@ -2685,6 +2695,11 @@ PrefabInstance:
       propertyPath: throwAudio
       value: 
       objectReference: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
+    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: layerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6556991258877670139, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: QuitDialog

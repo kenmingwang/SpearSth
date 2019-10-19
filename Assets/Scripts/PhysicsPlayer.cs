@@ -12,9 +12,10 @@ public class PhysicsPlayer : PhysicsObject
 {
     public float maxSpeed = 7;
     public float jumpTakeOffSpeed = 7;
+    public LayerMask layerMask;
 
     public AudioClip throwAudio;
-    
+
     AudioSource audioSource;
 
     /* Spear related fields */
@@ -83,18 +84,22 @@ public class PhysicsPlayer : PhysicsObject
 
             if (SpearInHand)
             {
-                float x = 0f;
-                Vector3 spwanPos = new Vector3();
-                Quaternion angle = new Quaternion();
+                Quaternion angle;
+                Vector3 spwanPos;
+                float x;
                 // face left
                 if (spriteRenderer.flipX)
                 {
+                    if (CheckCloseToWall(false))
+                        return;
                     x = transform.position.x - 1;
                     spwanPos = new Vector3(x, transform.position.y + 0.4f);
-                    angle = Quaternion.Euler(0, 0,180);
+                    angle = Quaternion.Euler(0, 0, 180);
                 }
                 else
                 {
+                    if (CheckCloseToWall(true))
+                        return;
                     x = transform.position.x + 1;
                     spwanPos = new Vector3(x, transform.position.y + 0.4f);
                     angle = Quaternion.Euler(0, 0, 0);
@@ -129,6 +134,20 @@ public class PhysicsPlayer : PhysicsObject
     public bool IsAlive()
     {
         return PlayerAlive;
+    }
+
+    private bool CheckCloseToWall(bool flipX)
+    {
+        Vector2 dir = flipX ? Vector2.right : Vector2.left;
+        // Check if too close to wall
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 1.5f, layerMask);
+        Debug.DrawRay(transform.position, dir, Color.red);
+        if (Hit)
+        {
+            Debug.Log(Hit.collider.tag);
+            return true;
+        }
+        return false;
     }
 
 

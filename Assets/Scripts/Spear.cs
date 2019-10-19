@@ -7,7 +7,7 @@ public class Spear : MonoBehaviour
     Vector3 fwd;
 
     public GameObject Player;
-    public int SpearSpeed=75;
+    public float SpearSpeed=30f;
 
     public AudioClip spearHit;
     
@@ -51,7 +51,7 @@ public class Spear : MonoBehaviour
         if (isThrowTriggered)
         {
 
-            GetComponent<Rigidbody2D>().AddForce(transform.right * SpearSpeed);
+            GetComponent<Rigidbody2D>().velocity = (transform.right * SpearSpeed);
         }
 
         else if (isRecallTriggered)
@@ -60,7 +60,7 @@ public class Spear : MonoBehaviour
              transform.LookAt(Player.transform);
             transform.Rotate(0, 90, -180);
 
-            GetComponent<Rigidbody2D>().AddForce(transform.right * SpearSpeed);
+            GetComponent<Rigidbody2D>().velocity = (transform.right * SpearSpeed);
         }
 
     }
