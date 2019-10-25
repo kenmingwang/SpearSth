@@ -1163,7 +1163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680481658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.516125, y: 3.28, z: 3.370962}
+  m_LocalPosition: {x: -8.51, y: 5.46, z: 3.370962}
   m_LocalScale: {x: 1, y: 6.54, z: 1}
   m_Children: []
   m_Father: {fileID: 738232186}
@@ -1918,8 +1918,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672558261}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.2, y: 4.8, z: 3.370962}
-  m_LocalScale: {x: 5.192262, y: 0.8152623, z: 1}
+  m_LocalPosition: {x: -15.986, y: 3.57, z: 3.370962}
+  m_LocalScale: {x: 14.060646, y: 0.8152623, z: 1}
   m_Children: []
   m_Father: {fileID: 738232186}
   m_RootOrder: 1
@@ -2023,8 +2023,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1768027290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.766126, y: 6.904794, z: 3.370962}
-  m_LocalScale: {x: 7.6375, y: 1, z: 1}
+  m_LocalPosition: {x: -17.59, y: 6.904794, z: 3.370962}
+  m_LocalScale: {x: 10.913987, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 738232186}
   m_RootOrder: 2
@@ -2628,12 +2628,12 @@ PrefabInstance:
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -59.25
+      value: -37.69
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.97
+      value: 7.06
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
@@ -2690,15 +2690,40 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 20.48
       objectReference: {fileID: 0}
+    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.13626838
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 14.023592
+      objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
-      propertyPath: throwAudio
-      value: 
-      objectReference: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
+      propertyPath: gravityModifier
+      value: -9.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
-      propertyPath: layerMask.m_Bits
-      value: 256
+      propertyPath: gravityValue
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: gravityFallMod
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: jumpTakeOffSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258877670139, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
