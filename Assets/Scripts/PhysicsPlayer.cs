@@ -78,7 +78,7 @@ public class PhysicsPlayer : PhysicsObject
 
     protected override void CheckSpearStatus()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("fire");
 
