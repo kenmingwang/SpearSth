@@ -195,10 +195,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityValue: -20
-  gravityFallMod: 2
+  gravityValue: -10
+  gravityFallValue: -16
   maxSpeed: 7
-  jumpTakeOffSpeed: 10
+  jumpTakeOffSpeed: 7.5
+  jumpDecay: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 256

@@ -11,8 +11,12 @@ public class PhysicsObject : MonoBehaviour
 {
 
     public float minGroundNormalY = .65f;
+    
+    [Range(0, -50)]
     public float gravityValue = -9.8f;
-    public float gravityFallMod = 2.0f;
+
+    [Range(0, -50)]
+    public float gravityFallValue = 2.0f;
 
     protected Vector2 targetVelocity;
     protected bool grounded;
@@ -69,7 +73,7 @@ public class PhysicsObject : MonoBehaviour
         velocity.y += gravityValue * Time.deltaTime;
         if (velocity.y < 0)
         {
-            velocity.y += gravityValue * gravityFallMod * Time.deltaTime;
+            velocity.y += gravityFallValue * Time.deltaTime;
         }
         velocity.x = targetVelocity.x;
 

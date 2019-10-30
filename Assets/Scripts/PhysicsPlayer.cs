@@ -10,8 +10,18 @@ using UnityEngine.SceneManagement;
  */
 public class PhysicsPlayer : PhysicsObject
 {
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float maxSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float jumpTakeOffSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1.0f, 0.0f)]
+    public float jumpDecay;
+
     public LayerMask layerMask;
 
     public AudioClip throwAudio;
@@ -60,7 +70,7 @@ public class PhysicsPlayer : PhysicsObject
         {
             if (velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.25f;
+                velocity.y = velocity.y * jumpDecay;
             }
         }
 
