@@ -196,15 +196,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityModifier: 1
+  gravityValue: -10
+  gravityFallValue: -16
   maxSpeed: 7
-  jumpTakeOffSpeed: 7
+  jumpTakeOffSpeed: 7.5
+  jumpDecay: 1
+  airMovementMod: 0.36
   layerMask:
     serializedVersion: 2
     m_Bits: 256
-  movingLayer:
-    serializedVersion: 2
-    m_Bits: 512
   throwAudio: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
 --- !u!212 &6556991258934261786
 SpriteRenderer:

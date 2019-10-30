@@ -95,7 +95,7 @@ public class Spear : MonoBehaviour
        
         if (collision.gameObject.tag == "Switch")
         {
-            Debug.Log("Dank Release");
+            //Debug.Log("Dank Release");
             collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
 
         }

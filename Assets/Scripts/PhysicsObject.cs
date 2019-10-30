@@ -11,7 +11,12 @@ public class PhysicsObject : MonoBehaviour
 {
 
     public float minGroundNormalY = .65f;
-    public float gravityModifier = 1f;
+    
+    [Range(0, -50)]
+    public float gravityValue = -9.8f;
+
+    [Range(0, -50)]
+    public float gravityFallValue = 2.0f;
 
     protected Vector2 targetVelocity;
     protected bool grounded;
@@ -44,7 +49,8 @@ public class PhysicsObject : MonoBehaviour
         ComputeVelocity();
         CheckPlayerStatus();
         CheckSpearStatus();
-
+        
+       
     }
 
     protected virtual void ComputeVelocity()
@@ -64,7 +70,11 @@ public class PhysicsObject : MonoBehaviour
 
     void FixedUpdate()
     {
-        velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
+        velocity.y += gravityValue * Time.deltaTime;
+        if (velocity.y < 0)
+        {
+            velocity.y += gravityFallValue * Time.deltaTime;
+        }
         velocity.x = targetVelocity.x;
 
         grounded = false;

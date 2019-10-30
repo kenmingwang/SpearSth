@@ -10,8 +10,22 @@ using UnityEngine.SceneManagement;
  */
 public class PhysicsPlayer : PhysicsObject
 {
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float maxSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float jumpTakeOffSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1.0f, 0.0f)]
+    public float jumpDecay;
+
+    [Tooltip("Sets the modifier for moving in midair")]
+    [Range(0.0f, 1.0f)]
+    public float airMovementMod;
+
     public LayerMask layerMask;
 
     public LayerMask movingLayer;
@@ -55,7 +69,14 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxis("Horizontal");
+        if (grounded)
+        {
+            move.x = Input.GetAxis("Horizontal");
+        } else
+        {
+            move.x = 0.6f * Input.GetAxis("Horizontal");
+        }
+        
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
@@ -65,7 +86,7 @@ public class PhysicsPlayer : PhysicsObject
         {
             if (velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.5f;
+                velocity.y = velocity.y * jumpDecay;
             }
         }
 
@@ -83,7 +104,7 @@ public class PhysicsPlayer : PhysicsObject
 
     protected override void CheckSpearStatus()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") || Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("fire");
 
