@@ -22,6 +22,10 @@ public class PhysicsPlayer : PhysicsObject
     [Range(1.0f, 0.0f)]
     public float jumpDecay;
 
+    [Tooltip("Sets the modifier for moving in midair")]
+    [Range(0.0f, 1.0f)]
+    public float airMovementMod;
+
     public LayerMask layerMask;
 
     public AudioClip throwAudio;
@@ -60,7 +64,14 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxis("Horizontal");
+        if (grounded)
+        {
+            move.x = Input.GetAxis("Horizontal");
+        } else
+        {
+            move.x = 0.6f * Input.GetAxis("Horizontal");
+        }
+        
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
