@@ -5,28 +5,38 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class EnemyParent : MonoBehaviour
+public class HealthSystem : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float maxHealth { get; set; }
+    public float maxHealth;
+    public bool isPlayer;
     private float currentHealth { get; set; }
 
     private GameObject Canvas { get; set; }
     private GameObject hbarObj { get; set; }
-    private RectTransform recTrans{get;set;}
+    private RectTransform recTrans { get; set; }
 
     private Slider healthBar { get; set; }
 
-    public Vector2 offset { get; set; }
+    private bool invincible;
+    private float invincibleTime;
+    private PhysicsPlayer player;
+
+    public Vector2 offset;
 
     GameObject prefab;
     void Start()
-    {    
+    {
         Init();
     }
 
     protected void Init()
     {
+
+        if (isPlayer)
+        {
+            player = GameObject.Find("Player").GetComponent<PhysicsPlayer>();
+        }
         Canvas = GameObject.Find("Canvas");
         // Instantiate slider(healthbar)
         prefab = Resources.Load("HealthBar") as GameObject;
@@ -34,23 +44,21 @@ public class EnemyParent : MonoBehaviour
         healthBar = hbarObj.GetComponent<Slider>();
         healthBar.transform.SetParent(Canvas.transform);
         recTrans = hbarObj.GetComponent<RectTransform>();
-
+        invincible = false;
+        invincibleTime = 3f;
         HealthBarFollow();
 
         // Set max health
-        maxHealth = 2;
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         CalculateHealth();
-
-        //Differs every enemy
-        offset = new Vector2(0, 100);
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpdateWUDI();
         CalculateHealth();
         HealthBarFollow();
     }
@@ -59,9 +67,16 @@ public class EnemyParent : MonoBehaviour
 
     public void Damaged(GameObject gameObj)
     {
-        if(--currentHealth <= 0)
+        if (!invincible)
         {
-            Die(gameObj);
+            if (--currentHealth <= 0)
+            {
+                Die(gameObj);
+            }
+            if (isPlayer)
+            {
+                WUDI();
+            }
         }
     }
 
@@ -81,5 +96,36 @@ public class EnemyParent : MonoBehaviour
         Vector3 tarPos = transform.position;
         Vector2 pos = RectTransformUtility.WorldToScreenPoint(Camera.main, tarPos);
         recTrans.position = pos + offset;
+    }
+
+
+    // Player invincible for 2 seconds after being damaged
+    private void WUDI()
+    {
+        invincible = true;
+    }
+
+    private void UpdateWUDI()
+    {
+        if (invincible)
+        {
+            invincibleTime -= Time.deltaTime;
+            if (invincibleTime <= 0)
+            {
+
+                invincible = false;
+                invincibleTime = 3f;
+            }
+            else
+            {
+                float remain = (3 - invincibleTime) % 0.3f;
+                player.flash(remain > 0.15f);
+            }
+        }
+    }
+
+    public bool IsWUDI()
+    {
+        return invincible;
     }
 }

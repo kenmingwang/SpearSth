@@ -14,6 +14,8 @@ public class PhysicsPlayer : PhysicsObject
     public float jumpTakeOffSpeed = 7;
     public LayerMask layerMask;
 
+    public LayerMask movingLayer;
+
     public AudioClip throwAudio;
 
     AudioSource audioSource;
@@ -23,6 +25,8 @@ public class PhysicsPlayer : PhysicsObject
     private GameObject prefSpear;
     private GameObject Spear;
 
+
+
     Spear SpearScript;
     private bool SpearInHand = true;
     private bool SpawnOrRecallSpear;
@@ -30,6 +34,7 @@ public class PhysicsPlayer : PhysicsObject
 
 
     private SpriteRenderer spriteRenderer;
+    private GameObject hitMovingPlatform;
     //private Animator animator;
 
     // Use this for initialization
@@ -37,7 +42,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         prefSpear = Resources.Load("Spear") as GameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
+        // audioSource = GetComponent<AudioSource>();
         // animator = GetComponent<Animator>();
     }
 
@@ -121,9 +126,13 @@ public class PhysicsPlayer : PhysicsObject
         }
     }
 
+
     protected override void CheckPlayerStatus()
     {
+        if (CheckStandOnMovingPlatform())
+        {
 
+        }
     }
 
     public void Die()
@@ -140,7 +149,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 dir = flipX ? Vector2.right : Vector2.left;
         // Check if too close to wall
-        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 2f, layerMask);
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 2.3f, layerMask);
         Debug.DrawRay(transform.position, dir, Color.red);
         if (Hit)
         {
@@ -149,4 +158,51 @@ public class PhysicsPlayer : PhysicsObject
         }
         return false;
     }
+
+    private bool CheckStandOnMovingPlatform()
+    {
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, movingLayer);
+        Debug.DrawRay(transform.position, Vector2.down, Color.red);
+        if (Hit)
+        {
+            hitMovingPlatform = Hit.collider.gameObject;
+            Debug.Log(Hit.collider.tag + "moving");
+            Hit.collider.gameObject.GetComponent<MovingPlatform>().TriggerStanding();
+            transform.parent = Hit.collider.gameObject.transform;
+            return true;
+        }
+        else
+        {
+            if (hitMovingPlatform != null)
+            {
+                hitMovingPlatform.GetComponent<MovingPlatform>().TriggerExit();
+                hitMovingPlatform = null;
+            }
+            transform.parent = null;
+        }
+        return false;
+    }
+
+    internal void DamagedAction()
+    {
+        System.Random r = new System.Random();
+
+        int ran = r.Next(-1, 1);
+        if(ran <= 0)
+        {
+            ran = -1;
+        }
+        else
+        {
+            ran = 1;
+        }
+        transform.position += new Vector3(ran * 0.3f, 0.2f, 0);
+    }
+
+    internal void flash(bool v)
+    {
+        spriteRenderer.enabled = v;
+    }
+
+
 }
