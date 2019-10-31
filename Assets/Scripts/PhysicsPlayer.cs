@@ -10,9 +10,25 @@ using UnityEngine.SceneManagement;
  */
 public class PhysicsPlayer : PhysicsObject
 {
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float maxSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1, 50)]
     public float jumpTakeOffSpeed = 7;
+
+    //creates a public range for the more sensitive variables
+    [Range(1.0f, 0.0f)]
+    public float jumpDecay;
+
+    [Tooltip("Sets the modifier for moving in midair")]
+    [Range(0.0f, 1.0f)]
+    public float airMovementMod;
+
     public LayerMask layerMask;
+
+    public LayerMask movingLayer;
 
     public AudioClip throwAudio;
 
@@ -23,6 +39,8 @@ public class PhysicsPlayer : PhysicsObject
     private GameObject prefSpear;
     private GameObject Spear;
 
+
+
     Spear SpearScript;
     private bool SpearInHand = true;
     private bool SpawnOrRecallSpear;
@@ -30,6 +48,7 @@ public class PhysicsPlayer : PhysicsObject
 
 
     private SpriteRenderer spriteRenderer;
+    private GameObject hitMovingPlatform;
     //private Animator animator;
 
     // Use this for initialization
@@ -37,7 +56,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         prefSpear = Resources.Load("Spear") as GameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        audioSource = GetComponent<AudioSource>();
+        // audioSource = GetComponent<AudioSource>();
         // animator = GetComponent<Animator>();
     }
 
@@ -50,7 +69,14 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 move = Vector2.zero;
 
-        move.x = Input.GetAxis("Horizontal");
+        if (grounded)
+        {
+            move.x = Input.GetAxis("Horizontal");
+        } else
+        {
+            move.x = 0.6f * Input.GetAxis("Horizontal");
+        }
+        
 
         if (Input.GetButtonDown("Jump") && grounded)
         {
@@ -60,7 +86,7 @@ public class PhysicsPlayer : PhysicsObject
         {
             if (velocity.y > 0)
             {
-                velocity.y = velocity.y * 0.5f;
+                velocity.y = velocity.y * jumpDecay;
             }
         }
 
@@ -121,9 +147,13 @@ public class PhysicsPlayer : PhysicsObject
         }
     }
 
+
     protected override void CheckPlayerStatus()
     {
+        if (CheckStandOnMovingPlatform())
+        {
 
+        }
     }
 
     public void Die()
@@ -140,7 +170,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         Vector2 dir = flipX ? Vector2.right : Vector2.left;
         // Check if too close to wall
-        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 2f, layerMask);
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, dir, 2.3f, layerMask);
         Debug.DrawRay(transform.position, dir, Color.red);
         if (Hit)
         {
@@ -149,4 +179,51 @@ public class PhysicsPlayer : PhysicsObject
         }
         return false;
     }
+
+    private bool CheckStandOnMovingPlatform()
+    {
+        RaycastHit2D Hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, movingLayer);
+        Debug.DrawRay(transform.position, Vector2.down, Color.red);
+        if (Hit)
+        {
+            hitMovingPlatform = Hit.collider.gameObject;
+            Debug.Log(Hit.collider.tag + "moving");
+            Hit.collider.gameObject.GetComponent<MovingPlatform>().TriggerStanding();
+            transform.parent = Hit.collider.gameObject.transform;
+            return true;
+        }
+        else
+        {
+            if (hitMovingPlatform != null)
+            {
+                hitMovingPlatform.GetComponent<MovingPlatform>().TriggerExit();
+                hitMovingPlatform = null;
+            }
+            transform.parent = null;
+        }
+        return false;
+    }
+
+    internal void DamagedAction()
+    {
+        System.Random r = new System.Random();
+
+        int ran = r.Next(-1, 1);
+        if(ran <= 0)
+        {
+            ran = -1;
+        }
+        else
+        {
+            ran = 1;
+        }
+        transform.position += new Vector3(ran * 0.3f, 0.2f, 0);
+    }
+
+    internal void flash(bool v)
+    {
+        spriteRenderer.enabled = v;
+    }
+
+
 }

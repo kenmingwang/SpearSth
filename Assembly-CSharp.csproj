@@ -62,7 +62,6 @@
      <Compile Include="Assets\Scripts\NewPhysicsTest.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
      <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Spear.cs" />
      <Compile Include="Assets\Scripts\WeakEnemies.cs" />
  <Reference Include="Unity.Timeline.Editor">

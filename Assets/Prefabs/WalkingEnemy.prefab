@@ -168,6 +168,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7992abf6cfa62a846882a6a58e1d8413, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 2
+  isPlayer: 0
+  offset: {x: 0, y: 100}
 --- !u!95 &-7101769972466947356
 Animator:
   serializedVersion: 3

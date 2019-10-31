@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Enemy
   - Switch
+  - Hazard
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - 
   - 
   - ground
-  - 
+  - movingground
   - 
   - 
   - 

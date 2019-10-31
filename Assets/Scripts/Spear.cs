@@ -101,7 +101,7 @@ public class Spear : MonoBehaviour
         }
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyParent>().Damaged(collision.gameObject);
+            collision.gameObject.GetComponent<HealthSystem>().Damaged(collision.gameObject);
 
             audioSource.PlayOneShot(spearHit, 0.4f);
             Debug.Log("Hit Enemy");
