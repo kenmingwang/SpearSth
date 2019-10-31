@@ -26,7 +26,7 @@ public class CameraWaypoint: MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("passed");
-            if (camera.transform.position.x == prevCameraPos.transform.position.x)
+            if (camera.transform.position.x == prevCameraPos.transform.position.x && camera.transform.position.y == prevCameraPos.transform.position.y)
             {
                 Debug.Log("dab");
                 float newX = prevCameraPos.transform.position.x - nextCameraPos.transform.position.x;
