@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Switch
   - Hazard
+  - CameraPosition
   layers:
   - Default
   - TransparentFX
