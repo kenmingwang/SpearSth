@@ -59,9 +59,11 @@
      <Compile Include="Assets\Scripts\EnemyWalker.cs" />
      <Compile Include="Assets\Scripts\EnvSwitch.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Grappler.cs" />
      <Compile Include="Assets\Scripts\Hazard.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
+     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
      <Compile Include="Assets\Scripts\NewPhysicsTest.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
      <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />

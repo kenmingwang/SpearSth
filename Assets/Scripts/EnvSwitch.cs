@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnvSwitch : MonoBehaviour
 {
-    [SerializeField]
     public GameObject doorAttached;
+
+    private float DoorMovement = 2.0f;
 
     private bool doorDown = true;
 
@@ -13,9 +14,9 @@ public class EnvSwitch : MonoBehaviour
     {
         if (doorDown)
         {
-            doorAttached = GameObject.Find("Door");
+            //doorAttached = GameObject.Find("Door");
             Debug.Log("Hit button");
-            doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
+            doorAttached.transform.Translate(DoorMovement, 0.0f, 0.0f);
             doorDown = false;
         }
     }
@@ -24,7 +25,7 @@ public class EnvSwitch : MonoBehaviour
     {
         if (!doorDown)
         {
-            doorAttached.transform.Translate(Vector2.left * 100 * Time.deltaTime);
+            doorAttached.transform.Translate(-DoorMovement, 0.0f, 0.0f);
             doorDown = true;
         }
     }

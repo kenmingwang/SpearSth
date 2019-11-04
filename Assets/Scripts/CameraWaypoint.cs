@@ -16,7 +16,7 @@ public class CameraWaypoint: MonoBehaviour
 
         if(nextCameraPos.tag == "CameraPosition")
         {
-            Debug.Log("tagem and bag em");
+            //throw an exception here
         }
     }
 
