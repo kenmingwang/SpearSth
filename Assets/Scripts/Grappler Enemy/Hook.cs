@@ -4,21 +4,17 @@ using UnityEngine;
 
 public class Hook : MonoBehaviour
 {
+
+    public float hookSpeed;
     // Start is called before the first frame update
     void Start()
     {
         Vector2 pos = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Awake()
     {
         Debug.Log("Kill me");
-        transform.position
+        //transform.position();
     }
 }
