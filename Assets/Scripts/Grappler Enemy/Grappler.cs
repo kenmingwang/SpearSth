@@ -12,7 +12,7 @@ public class Grappler : MonoBehaviour
 
     void Awake()
     {
-        prefHook = Resources.Load("Spear") as GameObject;
+        prefHook = Resources.Load("Hook") as GameObject;
     }
 
     // Update is called once per frame
@@ -49,6 +49,6 @@ public class Grappler : MonoBehaviour
         Vector3 spawnPos = new Vector3(transform.position.x, transform.position.y - 0.4f);
         Debug.Log("Firing capture device");
         yield return new WaitForSeconds(1);
-        hook = Instantiate(prefHook, spawnPos, Quaternion.Euler(0, 0, -90));
+        hook = Instantiate(prefHook, spawnPos, Quaternion.Euler(0, 0, 0));
     }
 }

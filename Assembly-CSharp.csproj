@@ -59,7 +59,8 @@
      <Compile Include="Assets\Scripts\EnemyWalker.cs" />
      <Compile Include="Assets\Scripts\EnvSwitch.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Grappler.cs" />
+     <Compile Include="Assets\Scripts\Grappler Enemy\Grappler.cs" />
+     <Compile Include="Assets\Scripts\Grappler Enemy\Hook.cs" />
      <Compile Include="Assets\Scripts\Hazard.cs" />
      <Compile Include="Assets\Scripts\HealthSystem.cs" />
      <Compile Include="Assets\Scripts\MovingPlatform.cs" />
