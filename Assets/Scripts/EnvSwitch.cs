@@ -14,7 +14,7 @@ public class EnvSwitch : MonoBehaviour
         if (doorDown)
         {
             doorAttached = GameObject.Find("Door");
-            //Debug.Log("Hit button");
+            Debug.Log("Hit button");
             doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
             doorDown = false;
         }
