@@ -102,7 +102,7 @@ MonoBehaviour:
   maxSpeed: 7
   jumpTakeOffSpeed: 12
   jumpDecay: 0.59
-  airMovementMod: 0.36
+  airMovementMod: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 256
