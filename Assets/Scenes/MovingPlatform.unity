@@ -551,6 +551,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 4.4562497
       objectReference: {fileID: 0}
+    - target: {fileID: 7368021339174553807, guid: 165090020ec6af3409a980610239c7d6,
+        type: 3}
+      propertyPath: moveOnTouch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368021339174553807, guid: 165090020ec6af3409a980610239c7d6,
+        type: 3}
+      propertyPath: vertical
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368021339174553807, guid: 165090020ec6af3409a980610239c7d6,
+        type: 3}
+      propertyPath: moveVelocity.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368021339174553807, guid: 165090020ec6af3409a980610239c7d6,
+        type: 3}
+      propertyPath: moveRange.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7368021339174553807, guid: 165090020ec6af3409a980610239c7d6,
+        type: 3}
+      propertyPath: moveRange.x
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165090020ec6af3409a980610239c7d6, type: 3}
 --- !u!1001 &1094366971373089443
@@ -619,6 +644,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094366971835448711, guid: 38f58d47291eb514f8c59bc693f1e82a,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.22103587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094366971835448711, guid: 38f58d47291eb514f8c59bc693f1e82a,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.22103587
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094366971835448711, guid: 38f58d47291eb514f8c59bc693f1e82a,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.22103587
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38f58d47291eb514f8c59bc693f1e82a, type: 3}
