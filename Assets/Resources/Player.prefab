@@ -205,6 +205,9 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 256
+  movingLayer:
+    serializedVersion: 2
+    m_Bits: 512
   throwAudio: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
 --- !u!212 &6556991258934261786
 SpriteRenderer:
