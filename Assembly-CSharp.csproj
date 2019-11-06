@@ -55,15 +55,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\EnemyParent.cs" />
+     <Compile Include="Assets\Scripts\CameraWaypoint.cs" />
      <Compile Include="Assets\Scripts\EnemyWalker.cs" />
      <Compile Include="Assets\Scripts\EnvSwitch.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Hazard.cs" />
+     <Compile Include="Assets\Scripts\HealthSystem.cs" />
+     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
      <Compile Include="Assets\Scripts\NewPhysicsTest.cs" />
      <Compile Include="Assets\Scripts\PhysicsObject.cs" />
      <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />
      <Compile Include="Assets\Scripts\Spear.cs" />
-     <Compile Include="Assets\Scripts\WeakEnemies.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/levez/Desktop/school/Junior/TradGame/SpearSth/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
