@@ -3113,6 +3113,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e01889843d57524796ddf7afccb6ebe, type: 3}
+--- !u!1 &801506189 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6556991258934261784, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+    type: 3}
+  m_PrefabInstance: {fileID: 250254386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &819866137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
@@ -5680,7 +5686,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42cebdcd3ece6d4496b74873a14745e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transportPeriod: 3
+  transportPeriod: 5
+  aimingPeriod: 3
+  player: {fileID: 801506189}
   firstPlat: {fileID: 391455593}
   secondPlat: {fileID: 588917052}
   thirdPlat: {fileID: 855108888}
