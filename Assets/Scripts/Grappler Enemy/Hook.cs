@@ -10,6 +10,8 @@ public class Hook : MonoBehaviour
     [Range(1, 50)]
     public float recallSpeed;
 
+    //public GameObject
+
     private bool hasCatch = false;
 
     private Vector2 velocity;
@@ -30,11 +32,25 @@ public class Hook : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("attacked");
+        if(collision.gameObject.tag == "Player")
+        {
+            velocity.y = 0;
+
+            hasCatch = true;
+
+
+            //private GameObject player;
+        }
+        Debug.Log("Attack ");
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("attacked c");
         if (collision.gameObject.tag == "Ground")
         {
             Debug.Log("attacked ground");
-        } 
+        }
     }
 
     private void Update()
