@@ -74,7 +74,7 @@ public class PhysicsPlayer : PhysicsObject
             move.x = Input.GetAxis("Horizontal");
         } else
         {
-            move.x = 0.6f * Input.GetAxis("Horizontal");
+            move.x = airMovementMod * Input.GetAxis("Horizontal");
         }
         
 
