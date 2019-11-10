@@ -10524,85 +10524,10 @@ PrefabInstance:
       propertyPath: QuitDialog
       value: 
       objectReference: {fileID: 354557341}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_AutoTiling
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 15.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 20.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.13626838
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261787, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 14.023592
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261782, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261782, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_Interpolate
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: gravityModifier
       value: -9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: gravityValue
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: gravityFallValue
-      value: -15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: jumpDecay
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: airMovementMod
-      value: 0.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: minGroundNormalY
-      value: 0.65
       objectReference: {fileID: 0}
     - target: {fileID: 12233648871986295, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
