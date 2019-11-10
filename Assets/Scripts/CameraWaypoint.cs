@@ -39,6 +39,7 @@ public class CameraWaypoint: MonoBehaviour
                 float newX = prevCameraPos.transform.position.x - nextCameraPos.transform.position.x;
                 float newY = prevCameraPos.transform.position.y - nextCameraPos.transform.position.y;
                 camera.transform.Translate(-newX, -newY, 0.0f);
+                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
             }
             else if ((camera.transform.position.x <= nextCameraPos.transform.position.x + 0.1f && camera.transform.position.x >= nextCameraPos.transform.position.x - 0.1f)
                 && camera.transform.position.y <= nextCameraPos.transform.position.y + 0.1f && camera.transform.position.y >= nextCameraPos.transform.position.y - 0.1f)
@@ -47,6 +48,7 @@ public class CameraWaypoint: MonoBehaviour
                 float newX = prevCameraPos.transform.position.x - nextCameraPos.transform.position.x;
                 float newY = prevCameraPos.transform.position.y - nextCameraPos.transform.position.y;
                 camera.transform.Translate(newX, newY, 0.0f);
+                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
             //Debug.Log(prevCameraPos.transform.position.x);
         }

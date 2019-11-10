@@ -11,8 +11,7 @@ public class EnemyShooter : MonoBehaviour
     public float aimingPeriod;
     private float aimingLeft;
 
-    
-    public GameObject player;
+    private GameObject player;
     [Header("Order does not matter")]
     public GameObject firstPlat;
     public GameObject secondPlat;
@@ -28,9 +27,12 @@ public class EnemyShooter : MonoBehaviour
     private GameObject bullet;
     private Vector2 prevPlayerTran;
     private float playerPrevTime = 0.1f;
+    
+    private bool Activate = false;
     // Start is called before the first frame update
     private void Awake()
     {
+        player = GameObject.Find("Player");
         prevPlayerTran = new Vector2(player.transform.position.x, player.transform.position.y);
     }
     void Start()
@@ -47,9 +49,12 @@ public class EnemyShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TransportInPeriod();
-        Aim(GetPrePlayerTran());
-        Shoot();
+        if (Activate)
+        {
+            TransportInPeriod();
+            Aim(GetPrePlayerTran());
+            Shoot();
+        }
     }
 
     private Vector2 GetPrePlayerTran()
@@ -83,12 +88,28 @@ public class EnemyShooter : MonoBehaviour
         }
     }
 
+    void DrawLine(Vector3 start, Vector3 end, Color color, float duration = 0.05f)
+    {
+        GameObject myLine = new GameObject();
+        myLine.transform.position = start;
+        myLine.AddComponent<LineRenderer>();
+        LineRenderer lr = myLine.GetComponent<LineRenderer>();
+        lr.material = new Material(Shader.Find("Particles/Alpha Blended Premultiply"));
+        lr.startColor = Color.red;
+        lr.endColor = Color.cyan;
+        lr.startWidth = 0.01f;
+        lr.endWidth = 0.005f;
+        lr.SetPosition(0, start);
+        lr.SetPosition(1, end);
+        Destroy(myLine, duration);
+    }
+
     private void Aim(Vector2 pt)
     {
         Vector2 firePos = shootingTip.transform.position;
         Vector2 playerPos = new Vector2(pt.x, pt.y);
         Vector2 dir = firePos - playerPos;
-        Debug.DrawRay(firePos, -dir * 1, Color.red);
+        DrawLine(firePos, playerPos, Color.red);
     }
 
     private void Shoot()
@@ -106,6 +127,11 @@ public class EnemyShooter : MonoBehaviour
             aimingLeft = aimingPeriod;
         }
 
+    }
+
+    public void ActivateShooter()
+    {
+        Activate = true;
     }
 
 }

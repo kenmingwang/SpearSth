@@ -63,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\MoveTrail.cs" />
+    <Compile Include="Assets\AimingLine.cs" />
     <Compile Include="Assets\Scripts\CameraWaypoint.cs" />
     <Compile Include="Assets\Scripts\EnemyShooter.cs" />
     <Compile Include="Assets\Scripts\EnemyWalker.cs" />
@@ -71,11 +71,14 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hazard.cs" />
     <Compile Include="Assets\Scripts\HealthSystem.cs" />
+    <Compile Include="Assets\Scripts\MoveTrail.cs" />
     <Compile Include="Assets\Scripts\MovingPlatform.cs" />
     <Compile Include="Assets\Scripts\NewPhysicsTest.cs" />
     <Compile Include="Assets\Scripts\PhysicsObject.cs" />
     <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />
+    <Compile Include="Assets\Scripts\ShooterActivate.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
+    <None Include="Assets\Particles\ParticlesAlpha Blended Premultiply.shader" />
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
