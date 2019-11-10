@@ -211,7 +211,6 @@ public class PhysicsPlayer : PhysicsObject
     internal void DamagedAction()
     {
         System.Random r = new System.Random();
-
         int ran = r.Next(-1, 1);
         if(ran <= 0)
         {
@@ -221,7 +220,15 @@ public class PhysicsPlayer : PhysicsObject
         {
             ran = 1;
         }
-        transform.position += new Vector3(ran * 0.3f, 0.2f, 0);
+        base.Movement(new Vector2(ran * 1, 1), true);
+
+
+
+
+        // GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+
+        // transform.position += new Vector3(ran * 0.3f, 0.2f, 0);
     }
 
     internal void flash(bool v)
