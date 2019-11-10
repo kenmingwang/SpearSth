@@ -22,9 +22,16 @@ public class MovingPlatform : MonoBehaviour
     private Vector3 endPoint2;
     private bool movingBack;
 
+    private List<Rigidbody2D> rgb = new List<Rigidbody2D>();
+    private Vector3 LastPos;
+    private Transform _transform;
+
     // Start is called before the first frame update
     void Start()
     {
+        _transform = transform;
+        LastPos = _transform.position;
+
         endPoint1 = transform.position + moveRange;
         endPoint2 = transform.position - moveRange;
     }
@@ -97,20 +104,44 @@ public class MovingPlatform : MonoBehaviour
 
     }
 
+    private void LateUpdate()
+    {
+        if(rgb.Count > 0)
+        {
+            foreach(var rb in rgb)
+            {
+                Vector3 v = (_transform.position - LastPos);
+                rb.transform.Translate(v, _transform);
+            }
+           
+        }
+        LastPos = _transform.position;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("hit player");
+            activateMove = true;
+            rgb.Add(collision.collider.GetComponent<Rigidbody2D>());
+        }
+        
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            // Debug.Log("hit player");
+            TriggerExit();
+            rgb.RemoveAt(0);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
 
     }
-
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Player")
-    //    {
-    //        Debug.Log("hit player");
-    //        activateMove = true;
-    //        collision.gameObject.transform.parent = transform;
-    //    }
-    //}
 
     //private void OnCollisionExit2D(Collision2D collision)
     //{

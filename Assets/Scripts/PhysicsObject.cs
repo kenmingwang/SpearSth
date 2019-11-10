@@ -10,7 +10,7 @@ using UnityEngine;
 public class PhysicsObject : MonoBehaviour
 {
 
-    public float minGroundNormalY = .65f;
+    public float minGroundNormalY = 0.65f;
     
     [Range(0, -50)]
     public float gravityValue = -9.8f;
@@ -90,9 +90,6 @@ public class PhysicsObject : MonoBehaviour
         move = Vector2.up * deltaPosition.y;
 
         Movement(move, true);
-
-
-
 
     }
 

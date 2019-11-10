@@ -45,7 +45,7 @@ public class PhysicsPlayer : PhysicsObject
     private bool SpearInHand = true;
     private bool SpawnOrRecallSpear;
     private bool PlayerAlive = true;
-
+    private bool PlayerOnMovingPlat = false;
 
     private SpriteRenderer spriteRenderer;
     private GameObject hitMovingPlatform;
@@ -71,6 +71,7 @@ public class PhysicsPlayer : PhysicsObject
 
         if (grounded)
         {
+            Debug.Log("move");
             move.x = Input.GetAxis("Horizontal");
         } else
         {
@@ -78,8 +79,9 @@ public class PhysicsPlayer : PhysicsObject
         }
         
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && (grounded || PlayerOnMovingPlat))
         {
+            Debug.Log("jump");
             velocity.y = jumpTakeOffSpeed;
         }
         else if (Input.GetButtonUp("Jump"))
@@ -182,25 +184,27 @@ public class PhysicsPlayer : PhysicsObject
 
     private bool CheckStandOnMovingPlatform()
     {
-        RaycastHit2D Hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, movingLayer);
-        Debug.DrawRay(transform.position, Vector2.down, Color.red);
-        if (Hit)
-        {
-            hitMovingPlatform = Hit.collider.gameObject;
-            Debug.Log(Hit.collider.tag + "moving");
-            Hit.collider.gameObject.GetComponent<MovingPlatform>().TriggerStanding();
-            transform.parent = Hit.collider.gameObject.transform;
-            return true;
-        }
-        else
-        {
-            if (hitMovingPlatform != null)
-            {
-                hitMovingPlatform.GetComponent<MovingPlatform>().TriggerExit();
-                hitMovingPlatform = null;
-            }
-            transform.parent = null;
-        }
+        //RaycastHit2D Hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, movingLayer);
+        //Debug.DrawRay(transform.position, Vector2.down, Color.red);
+        //if (Hit)
+        //{
+        //    PlayerOnMovingPlat = true;
+        //    hitMovingPlatform = Hit.collider.gameObject;
+        //    Debug.Log(Hit.collider.tag + "moving");
+        //    Hit.collider.gameObject.GetComponent<MovingPlatform>().TriggerStanding();
+        //    transform.parent = Hit.collider.gameObject.transform;
+        //    return true;
+        //}
+        //else
+        //{
+        //    PlayerOnMovingPlat = false;
+        //    if (hitMovingPlatform != null)
+        //    {
+        //        hitMovingPlatform.GetComponent<MovingPlatform>().TriggerExit();
+        //        hitMovingPlatform = null;
+        //    }
+        //    transform.parent = null;
+        //}
         return false;
     }
 
