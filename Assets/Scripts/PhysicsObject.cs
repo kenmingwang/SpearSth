@@ -38,19 +38,14 @@ public class PhysicsObject : MonoBehaviour
 
     void Start()
     {
-        contactFilter.useTriggers = false;
+        contactFilter.useTriggers = true;
         contactFilter.SetLayerMask(Physics2D.GetLayerCollisionMask(gameObject.layer));
         contactFilter.useLayerMask = true;
     }
 
     void Update()
     {
-        targetVelocity = Vector2.zero;
-        ComputeVelocity();
-        CheckPlayerStatus();
-        CheckSpearStatus();
-        
-       
+        targetVelocity = Vector2.zero;            
     }
 
     protected virtual void ComputeVelocity()

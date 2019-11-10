@@ -63,8 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AimingLine.cs" />
+    <Compile Include="Assets\Scripts\AimingLine.cs" />
     <Compile Include="Assets\Scripts\CameraWaypoint.cs" />
+    <Compile Include="Assets\Scripts\CarryRgbSensor.cs" />
     <Compile Include="Assets\Scripts\EnemyShooter.cs" />
     <Compile Include="Assets\Scripts\EnemyWalker.cs" />
     <Compile Include="Assets\Scripts\EnvSwitch.cs" />

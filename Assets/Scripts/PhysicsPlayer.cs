@@ -60,6 +60,12 @@ public class PhysicsPlayer : PhysicsObject
         // animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        ComputeVelocity();
+        CheckPlayerStatus();
+        CheckSpearStatus();
+    }
     internal void SetSpearInHand()
     {
         SpearInHand = !SpearInHand;

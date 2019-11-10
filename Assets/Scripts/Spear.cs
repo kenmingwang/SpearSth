@@ -75,7 +75,7 @@ public class Spear : MonoBehaviour
             isInWall = true;
             isThrowTriggered = false;
             GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-            GetComponent<BoxCollider2D>().size = new Vector2(2.8f, 0.5f);
+            GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.1f);
         } else if (collision.gameObject.tag == "Switch")
         {
             wallPos = transform.position;
