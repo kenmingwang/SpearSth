@@ -11,6 +11,7 @@ TagManager:
   - Switch
   - Hazard
   - CameraPosition
+  - MovingPlat
   layers:
   - Default
   - TransparentFX

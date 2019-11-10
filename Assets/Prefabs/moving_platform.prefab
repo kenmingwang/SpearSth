@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2865479483219055138}
   - component: {fileID: 7541812885301952350}
   - component: {fileID: 6986101790927188142}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sensor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,9 +84,9 @@ GameObject:
   - component: {fileID: 5532847716872545679}
   - component: {fileID: 7368021339174553807}
   - component: {fileID: 5532847716872545715}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: moving_platform
-  m_TagString: Untagged
+  m_TagString: MovingPlat
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

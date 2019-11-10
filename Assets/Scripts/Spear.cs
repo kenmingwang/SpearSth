@@ -76,7 +76,8 @@ public class Spear : MonoBehaviour
             isThrowTriggered = false;
             GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
             GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.1f);
-        } else if (collision.gameObject.tag == "Switch")
+        } 
+        else if (collision.gameObject.tag == "Switch")
         {
             wallPos = transform.position;
             wallRot = transform.rotation;
@@ -84,6 +85,17 @@ public class Spear : MonoBehaviour
             collision.gameObject.GetComponent<EnvSwitch>().SwitchPressed();
             isInWall = true;
             isThrowTriggered = false;
+        }
+        else if (collision.gameObject.tag == "MovingPlat")
+        {
+            wallPos = transform.position;
+            wallRot = transform.rotation;
+            Debug.Log("Hit Wall");
+            isInWall = true;
+            isThrowTriggered = false;
+            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
+            GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.1f);
+          // transform.SetParent(collision.gameObject.transform);
         }
 
     }
