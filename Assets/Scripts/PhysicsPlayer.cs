@@ -77,7 +77,7 @@ public class PhysicsPlayer : PhysicsObject
 
         if (grounded)
         {
-            Debug.Log("move");
+            //Debug.Log("move");
             move.x = Input.GetAxis("Horizontal");
         } else
         {

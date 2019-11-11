@@ -6,6 +6,7 @@ public class CameraWaypoint: MonoBehaviour
 {
     public GameObject prevCameraPos;
     public GameObject nextCameraPos;
+    public bool StartingWaypoint;
 
 
     private GameObject camera;
@@ -13,7 +14,13 @@ public class CameraWaypoint: MonoBehaviour
     void Start()
     {
         camera = GameObject.Find("MegaCamera");
-
+        if (StartingWaypoint)
+        {
+            float newX = camera.transform.position.x - prevCameraPos.transform.position.x;
+            float newY = camera.transform.position.y - prevCameraPos.transform.position.y;
+            camera.transform.Translate(-newX, -newY, 0.0f);
+            camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+        }
         if(nextCameraPos.tag == "CameraPosition")
         {
             Debug.Log("tagem and bag em");
@@ -26,7 +33,7 @@ public class CameraWaypoint: MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
