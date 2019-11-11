@@ -9,6 +9,7 @@ public class CameraWaypoint : MonoBehaviour
 
     private GameObject player;
     public bool StartingWaypoint;
+    public bool VerticalWaypoint;
     Renderer m_Renderer;
 
     private bool nearPrev;
@@ -73,28 +74,30 @@ public class CameraWaypoint : MonoBehaviour
          */
         if (collision.gameObject.tag == "Player")
         {
-            CheckCameraLocation();
-
-            bool playerNearPrev = player.transform.position.x < this.transform.position.x;
-            
-            Debug.Log("playerNearPrev: " + playerNearPrev);
-
-            Debug.Log("nearNext: " + nearNext + " playerNearPrev: " + playerNearPrev);
-
-            Debug.Log("nearPrev: " + nearPrev + " playerNearPrev: " + playerNearPrev);
-
-            if (nearNext && playerNearPrev)
+            if (!VerticalWaypoint)
             {
-                camera.transform.Translate(newX, newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                CheckCameraLocation();
+
+                bool playerNearPrev = player.transform.position.x < this.transform.position.x;
+
+                Debug.Log("playerNearPrev: " + playerNearPrev);
+
+                Debug.Log("nearNext: " + nearNext + " playerNearPrev: " + playerNearPrev);
+
+                Debug.Log("nearPrev: " + nearPrev + " playerNearPrev: " + playerNearPrev);
+
+                if (nearNext && playerNearPrev)
+                {
+                    camera.transform.Translate(newX, newY, 0.0f);
+                    camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                }
+                else if (nearPrev && !playerNearPrev)
+                {
+                    camera.transform.Translate(-newX, -newY, 0.0f);
+                    camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                }
             }
-            else if (nearPrev && !playerNearPrev)
-            {
-                camera.transform.Translate(-newX, -newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
-            }
-        }
-        
+        }            
     }
 
     private void CheckCameraLocation()
