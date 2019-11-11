@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minGroundNormalY: 0.65
-  gravityValue: -30
-  gravityFallValue: -15
-  maxSpeed: 8
-  jumpTakeOffSpeed: 15
-  jumpDecay: 0.5
+  gravityValue: -31.3
+  gravityFallValue: -8.5
+  maxSpeed: 7
+  jumpTakeOffSpeed: 14
+  jumpDecay: 0.59
   airMovementMod: 0.69
   layerMask:
     serializedVersion: 2
