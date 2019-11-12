@@ -895,8 +895,13 @@ PrefabInstance:
     - target: {fileID: 12233648871986295, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 12233648871986295, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2ab812afcedcde24bac851d68ff671ec, type: 3}
     m_RemovedComponents:
     - {fileID: 6536192832633946469, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}
@@ -1317,12 +1322,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 707016117}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &391455593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4371153216492524336, guid: 9e01889843d57524796ddf7afccb6ebe,
-    type: 3}
-  m_PrefabInstance: {fileID: 951773024}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &402190614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
@@ -1710,12 +1709,12 @@ PrefabInstance:
     - target: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.45
+      value: 2.16
       objectReference: {fileID: 0}
     - target: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.43
+      value: 25.64
       objectReference: {fileID: 0}
     - target: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
         type: 3}
@@ -3429,12 +3428,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e01889843d57524796ddf7afccb6ebe, type: 3}
---- !u!1 &855108888 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4371153216492524336, guid: 9e01889843d57524796ddf7afccb6ebe,
-    type: 3}
-  m_PrefabInstance: {fileID: 110595491}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &856230456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4371153216492524348, guid: 9e01889843d57524796ddf7afccb6ebe,
@@ -4178,6 +4171,11 @@ PrefabInstance:
       propertyPath: nextCameraPos
       value: 
       objectReference: {fileID: 1894485626}
+    - target: {fileID: 9117513143736528975, guid: 8464373eb5dffd548983d83d34ec35fb,
+        type: 3}
+      propertyPath: VerticalWaypoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9117513143736528974, guid: 8464373eb5dffd548983d83d34ec35fb,
         type: 3}
       propertyPath: m_Size.x
@@ -8411,17 +8409,17 @@ PrefabInstance:
     - target: {fileID: 8238637782504402937, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402941, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -103.43
+      value: -13.05
       objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402941, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 17.339998
+      value: 28.94
       objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402941, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
@@ -8477,7 +8475,7 @@ PrefabInstance:
         type: 3}
       propertyPath: firstPlat
       value: 
-      objectReference: {fileID: 391455593}
+      objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402940, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: secondPlat
@@ -8487,7 +8485,7 @@ PrefabInstance:
         type: 3}
       propertyPath: thirdPlat
       value: 
-      objectReference: {fileID: 855108888}
+      objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402939, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: m_IsTrigger
