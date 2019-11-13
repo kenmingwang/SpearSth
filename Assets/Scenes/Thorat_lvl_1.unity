@@ -633,12 +633,12 @@ PrefabInstance:
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.84
+      value: -7.63
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.7
+      value: 8.81
       objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261780, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
@@ -2202,6 +2202,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 4519029303321036342, guid: 64cd5a91825fc46429cca0de691945ec,
+        type: 3}
+      propertyPath: doorAttached
+      value: 
+      objectReference: {fileID: 1375052226}
     - target: {fileID: 4519029303321036343, guid: 64cd5a91825fc46429cca0de691945ec,
         type: 3}
       propertyPath: doorAttached
@@ -5493,6 +5498,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.79437494
       objectReference: {fileID: 0}
+    - target: {fileID: 4519029303321036342, guid: 64cd5a91825fc46429cca0de691945ec,
+        type: 3}
+      propertyPath: doorAttached
+      value: 
+      objectReference: {fileID: 874146369}
     - target: {fileID: 4519029303321036343, guid: 64cd5a91825fc46429cca0de691945ec,
         type: 3}
       propertyPath: doorAttached
@@ -8700,12 +8710,12 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 0.65875
       objectReference: {fileID: 0}
-    - target: {fileID: 4519029303321036343, guid: 64cd5a91825fc46429cca0de691945ec,
+    - target: {fileID: 4519029303321036342, guid: 64cd5a91825fc46429cca0de691945ec,
         type: 3}
       propertyPath: doorAttached
       value: 
       objectReference: {fileID: 862103161}
-    - target: {fileID: 4519029303321036342, guid: 64cd5a91825fc46429cca0de691945ec,
+    - target: {fileID: 4519029303321036343, guid: 64cd5a91825fc46429cca0de691945ec,
         type: 3}
       propertyPath: doorAttached
       value: 
