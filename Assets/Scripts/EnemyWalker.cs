@@ -12,6 +12,8 @@ public class EnemyWalker : MonoBehaviour
 
     private RaycastHit2D wallInfoForeward;
 
+    public Animator animator;
+
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -44,6 +46,7 @@ public class EnemyWalker : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            animator.SetTrigger("attacking");
             Debug.Log("Enemy hit player");
             var player = GameObject.Find("Player");
             if (!player.GetComponent<HealthSystem>().IsWUDI())
