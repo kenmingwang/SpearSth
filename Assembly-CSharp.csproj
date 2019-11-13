@@ -80,9 +80,6 @@
     <Compile Include="Assets\Scripts\ShooterActivate.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
     <None Include="Assets\Particles\ParticlesAlpha Blended Premultiply.shader" />
-    <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -103,6 +100,9 @@
     </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>E:/repos/Unity/SpearSth/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

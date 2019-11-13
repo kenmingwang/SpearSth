@@ -22,6 +22,7 @@ public class AimingLine : MonoBehaviour
         {
             Vector3 reflectAngle = Vector3.Reflect(ray.direction, hit.normal) * _reflectDistance;
             _line.SetPositions(new[] { transform.position, hit.point, reflectAngle });
+  
         }
     }
 }
