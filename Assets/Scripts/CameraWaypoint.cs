@@ -50,13 +50,13 @@ public class CameraWaypoint : MonoBehaviour
             {
                 Debug.Log("go foreward");
                 camera.transform.Translate(-newX, -newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                //camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
             }
             else if (nearNext)
             {
                 Debug.Log("go back");
                 camera.transform.Translate(newX, newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                //camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
             //Debug.Log(prevCameraPos.transform.position.x);
         }
@@ -87,12 +87,12 @@ public class CameraWaypoint : MonoBehaviour
                 if (nearNext && playerNearPrev)
                 {
                     camera.transform.Translate(newX, newY, 0.0f);
-                    camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                    //camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
                 }
                 else if (nearPrev && !playerNearPrev)
                 {
                     camera.transform.Translate(-newX, -newY, 0.0f);
-                    camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                    //camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
                 }
             }
         }            
