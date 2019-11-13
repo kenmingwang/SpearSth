@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   isPlayer: 0
-  offset: {x: 0, y: 2}
+  offset: {x: 0.2, y: 2}
 --- !u!95 &-7101769972466947356
 Animator:
   serializedVersion: 3

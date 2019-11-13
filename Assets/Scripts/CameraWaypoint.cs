@@ -30,9 +30,7 @@ public class CameraWaypoint : MonoBehaviour
         {
             float newX = camera.transform.position.x - prevCameraPos.transform.position.x;
             float newY = camera.transform.position.y - prevCameraPos.transform.position.y;
-            camera.transform.Translate(-newX, -newY, 0.0f);
-            camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
-        }
+            camera.transform.Translate(-newX, -newY, 0.0f);        }
         if (nextCameraPos.tag == "CameraPosition")
         {
             //Debug.Log("tagem and bag em");

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 /*
  * Ok so all of this code (besides spear spawning is stolen from https://learn.unity.com/tutorial/live-session-2d-platformer-character-controller
  * It is a tutorial so I feel less bad, but it is good to know that this is all stolen
@@ -216,9 +217,8 @@ public class PhysicsPlayer : PhysicsObject
 
     internal void DamagedAction()
     {
-        System.Random r = new System.Random();
-        int ran = r.Next(-1, 1);
-        if(ran <= 0)
+        var ran = UnityEngine.Random.Range(-1f, 1f);
+        if (ran <= 0)
         {
             ran = -1;
         }
@@ -227,14 +227,6 @@ public class PhysicsPlayer : PhysicsObject
             ran = 1;
         }
         base.Movement(new Vector2(ran * 1, 1), true);
-
-
-
-
-        // GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
-
-        // transform.position += new Vector3(ran * 0.3f, 0.2f, 0);
     }
 
     internal void flash(bool v)

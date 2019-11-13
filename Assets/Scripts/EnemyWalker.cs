@@ -45,7 +45,12 @@ public class EnemyWalker : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Enemy hit player");
-            GameObject.Find("Player").GetComponent<PhysicsPlayer>().Die();
+            var player = GameObject.Find("Player");
+            if (!player.GetComponent<HealthSystem>().IsWUDI())
+            {
+                player.GetComponent<PhysicsPlayer>().DamagedAction();
+            }
+            player.GetComponent<HealthSystem>().Damaged(player);
             // Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
         }
     }

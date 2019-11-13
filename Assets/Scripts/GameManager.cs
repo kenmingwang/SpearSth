@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private PhysicsPlayer player;
     private bool PlayerAlive;
 
+    public GameObject Canvas;
     public GameObject curCameraPos;
     public GameObject QuitDialog;
     private bool ActiveDialog = false;
@@ -29,7 +30,8 @@ public class GameManager : MonoBehaviour
         if (!PlayerAlive)
         {
             PauseGame();
-            QuitDialog.transform.position = curCameraPos.transform.position;
+            Debug.Log(curCameraPos.transform.position);
+            QuitDialog.transform.position = curCameraPos.transform.position + new Vector3(0,0,1);
             QuitDialog.SetActive(true);
             ActiveDialog = true;
         }
@@ -42,11 +44,19 @@ public class GameManager : MonoBehaviour
         }
         if(ActiveDialog && Input.GetKeyDown(KeyCode.Q))
         {
-            SceneManager.LoadScene("Thorat_Level_1");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ContinueGame();
             QuitDialog.SetActive(false);
             ActiveDialog = false;
 
+        }
+    }
+
+    public void NextStage()
+    {
+        if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCount)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
