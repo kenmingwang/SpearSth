@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1660265039893820157}
   - component: {fileID: 1660265039893820158}
   - component: {fileID: 1660265039893820159}
-  - component: {fileID: 6415659054703131117}
+  - component: {fileID: 7727739461549471061}
   m_Layer: 0
   m_Name: MegaCamera
   m_TagString: Untagged
@@ -84,7 +84,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660265039893820128}
   m_Enabled: 1
---- !u!114 &6415659054703131117
+--- !u!114 &7727739461549471061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,8 +93,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1660265039893820128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd78bcbb977fd943807bbdc60145bd0, type: 3}
+  m_Script: {fileID: 11500000, guid: 374749ebd74c5bb498f285ebeecbfc24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curCameraPos: {fileID: 0}
-  QuitDialog: {fileID: 0}
