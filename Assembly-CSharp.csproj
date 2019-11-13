@@ -71,7 +71,11 @@
      <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />
      <Compile Include="Assets\Scripts\ShooterActivate.cs" />
      <Compile Include="Assets\Scripts\Spear.cs" />
+     <Compile Include="Assets\Scripts\TripTurret.cs" />
      <None Include="Assets\Particles\ParticlesAlpha Blended Premultiply.shader" />
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/levez/Desktop/school/Junior/CS3500/SpearSth/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/levez/Desktop/school/Junior/CS3500/SpearSth/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
@@ -92,9 +96,6 @@
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/levez/Desktop/school/Junior/CS3500/SpearSth/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/levez/Desktop/school/Junior/CS3500/SpearSth/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/levez/Desktop/school/Junior/CS3500/SpearSth/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
