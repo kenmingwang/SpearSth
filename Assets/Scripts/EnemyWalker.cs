@@ -14,6 +14,13 @@ public class EnemyWalker : MonoBehaviour
 
     void FixedUpdate()
     {
+        // Bit shift the index of the layer (8) to get a bit mask
+        int layerMask = 1 << 10;
+
+        // This would cast rays only against colliders in layer 8.
+        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
+        layerMask = ~layerMask;
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
         RaycastHit2D groundInfoDown = Physics2D.Raycast(groundDectecton.position, Vector2.down, 0.5f);
@@ -27,6 +34,11 @@ public class EnemyWalker : MonoBehaviour
         }
         if (!groundInfoDown.collider || wallInfoForeward.collider)
         {
+            if(wallInfoForeward.collider.tag == "Player")
+            {
+                return;
+            }
+
             if (facingRight)
             {
                 transform.eulerAngles = new Vector3(0, -180, 0);
