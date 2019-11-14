@@ -13,6 +13,7 @@ public class EnemyWalker : MonoBehaviour
     private RaycastHit2D wallInfoForeward;
 
     public Animator animator;
+    public Animator animatoraa;
 
     void FixedUpdate()
     {
