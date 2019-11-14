@@ -76,8 +76,8 @@ Rigidbody2D:
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 2
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -102,7 +102,7 @@ MonoBehaviour:
   gravityValue: -31.3
   gravityFallValue: -8.5
   maxSpeed: 7
-  jumpTakeOffSpeed: 14
+  jumpTakeOffSpeed: 12.5
   jumpDecay: 0.59
   airMovementMod: 0.69
   layerMask:
@@ -112,6 +112,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   throwAudio: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
+  animator: {fileID: 2153281386524299077}
 --- !u!114 &6942913847557883115
 MonoBehaviour:
   m_ObjectHideFlags: 0

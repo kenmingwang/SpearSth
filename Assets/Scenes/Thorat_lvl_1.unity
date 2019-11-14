@@ -2445,6 +2445,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e01889843d57524796ddf7afccb6ebe, type: 3}
+--- !u!95 &140391720 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -7101769972466947356, guid: d17fb0c5861960c4a87e29762dc58e27,
+    type: 3}
+  m_PrefabInstance: {fileID: 962794311}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &143050538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3702,35 +3708,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261782, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.0001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261782, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: m_UseAutoMass
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: gravityModifier
       value: -9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 228852927}
-    - target: {fileID: 6942913847557883115, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: maxHealth
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 12233648871986295, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
@@ -3788,12 +3769,6 @@ PrefabInstance:
 --- !u!1 &228852925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6556991258934261784, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-    type: 3}
-  m_PrefabInstance: {fileID: 228852924}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &228852927 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2153281386524299077, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
     type: 3}
   m_PrefabInstance: {fileID: 228852924}
   m_PrefabAsset: {fileID: 0}
@@ -20021,6 +19996,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8902981709484619472, guid: d17fb0c5861960c4a87e29762dc58e27,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 140391720}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17fb0c5861960c4a87e29762dc58e27, type: 3}
 --- !u!1001 &975588768
