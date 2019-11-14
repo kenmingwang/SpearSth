@@ -12,8 +12,6 @@ public class EnemyWalker : MonoBehaviour
 
     private RaycastHit2D wallInfoForeward;
 
-    public Animator animator;
-
     void FixedUpdate()
     {
         transform.Translate(Vector2.right * speed * Time.deltaTime);
@@ -23,22 +21,39 @@ public class EnemyWalker : MonoBehaviour
         if (facingRight)
         {
             wallInfoForeward = Physics2D.Raycast(groundDectecton.position, Vector2.right, 0.01f);
-        } else
+        }
+        else
         {
             wallInfoForeward = Physics2D.Raycast(groundDectecton.position, Vector2.left, 0.01f);
         }
-        if (!groundInfoDown.collider || wallInfoForeward.collider)
-        {
-            if (facingRight)
-            {
-                transform.eulerAngles = new Vector3(0, -180, 0);
-                facingRight = false;
 
-            } else
+        if (!groundInfoDown.collider)
+        {
+            Turn();
+        }
+        else if (wallInfoForeward.collider)
+        {
+            if (wallInfoForeward.collider.tag == "Player")
             {
-                transform.eulerAngles = new Vector3(0, -0, 0);
-                facingRight = true;
+                return;
             }
+
+            Turn();
+        }
+    }
+
+    private void Turn()
+    {
+        if (facingRight)
+        {
+            transform.eulerAngles = new Vector3(0, -180, 0);
+            facingRight = false;
+
+        }
+        else
+        {
+            transform.eulerAngles = new Vector3(0, -0, 0);
+            facingRight = true;
         }
     }
 
@@ -46,7 +61,6 @@ public class EnemyWalker : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            animator.SetTrigger("attacking");
             Debug.Log("Enemy hit player");
             var player = GameObject.Find("Player");
             if (!player.GetComponent<HealthSystem>().IsWUDI())
