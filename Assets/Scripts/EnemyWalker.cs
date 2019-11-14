@@ -30,10 +30,9 @@ public class EnemyWalker : MonoBehaviour
         if (!groundInfoDown.collider)
         {
             Turn();
-        }
-        else if (wallInfoForeward.collider)
+        } else if(wallInfoForeward.collider)
         {
-            if (wallInfoForeward.collider.tag == "Player")
+            if(wallInfoForeward.collider.tag == "Player")
             {
                 return;
             }
