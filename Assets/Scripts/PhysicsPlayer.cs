@@ -50,7 +50,7 @@ public class PhysicsPlayer : PhysicsObject
 
     private SpriteRenderer spriteRenderer;
     private GameObject hitMovingPlatform;
-    //private Animator animator;
+    public Animator animator;
 
     // Use this for initialization
     void Awake()
@@ -80,16 +80,24 @@ public class PhysicsPlayer : PhysicsObject
         {
             //Debug.Log("move");
             move.x = Input.GetAxis("Horizontal");
-        } else
+             animator.SetFloat("running", Mathf.Abs(move.x));
+             animator.SetBool("jumping",false);
+
+        }
+        else
         {
             move.x = airMovementMod * Input.GetAxis("Horizontal");
+            // animator.SetFloat("jumping", Mathf.Abs(move.x));
+
         }
-        
+
 
         if (Input.GetButtonDown("Jump") && (grounded || PlayerOnMovingPlat))
         {
             Debug.Log("jump");
             velocity.y = jumpTakeOffSpeed;
+            animator.SetBool("jumping", true);
+
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -140,6 +148,7 @@ public class PhysicsPlayer : PhysicsObject
                     angle = Quaternion.Euler(0, 0, 0);
 
                 }
+                animator.SetTrigger("throwing");
                 Spear = Instantiate(prefSpear, spwanPos, angle);
                 SpearScript = Spear.GetComponent<Spear>();
                 SpearScript.TriggerThrow();
@@ -153,6 +162,10 @@ public class PhysicsPlayer : PhysicsObject
                 SpearScript.TriggerRecall();
                 SpawnOrRecallSpear = false;
             }
+        }
+        else
+        {
+           //    animator.SetBool("throwing", false);
         }
     }
 

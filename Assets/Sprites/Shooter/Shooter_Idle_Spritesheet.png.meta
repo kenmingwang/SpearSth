@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 90a7c725af2c88b4bb647058f8ae5269
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8136786256167128593
+    second: Shooter_Idle_Spritesheet_0
+  - first:
+      213: -1155233880511331093
+    second: Shooter_Idle_Spritesheet_1
+  - first:
+      213: -8568329590877388007
+    second: Shooter_Idle_Spritesheet_2
+  - first:
+      213: -1309263329146267109
+    second: Shooter_Idle_Spritesheet_3
+  - first:
+      213: 4860749021214213783
+    second: Shooter_Idle_Spritesheet_4
+  - first:
+      213: 4906001936210044106
+    second: Shooter_Idle_Spritesheet_5
+  - first:
+      213: 2645898695899338532
+    second: Shooter_Idle_Spritesheet_6
+  - first:
+      213: 1746176757554436028
+    second: Shooter_Idle_Spritesheet_7
+  - first:
+      213: -9499213384602515
+    second: Shooter_Idle_Spritesheet_8
+  - first:
+      213: -4193788495723351461
+    second: Shooter_Idle_Spritesheet_9
+  - first:
+      213: 735051053175428254
+    second: Shooter_Idle_Spritesheet_10
+  - first:
+      213: 7003158398739430335
+    second: Shooter_Idle_Spritesheet_11
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 2617
+        width: 649
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6a4e5ee83d1194428cb7fc9afbc7491
+      internalID: -8136786256167128593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2781
+        y: 2617
+        width: 656
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce546478f572cca4eafff8e3d29ac5cb
+      internalID: -1155233880511331093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 4789
+        y: 2617
+        width: 656
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443fd2bdf1d8f0b409926334d18ba8d4
+      internalID: -8568329590877388007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6797
+        y: 2617
+        width: 656
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05c15001a45bf104a961f919d17be3e9
+      internalID: -1309263329146267109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 8805
+        y: 2617
+        width: 672
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045b83f7aacf22c4cbee3def40b0fd91
+      internalID: 4860749021214213783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 10828
+        y: 2617
+        width: 664
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ffe11baa40413243879537eba7cad69
+      internalID: 4906001936210044106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 12852
+        y: 2617
+        width: 664
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52fe1b72b4792174eaf574b1e64e4622
+      internalID: 2645898695899338532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 14922
+        y: 2617
+        width: 664
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba17e8724bbbfd749b2af07fe86cc9cd
+      internalID: 1746176757554436028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 570
+        width: 664
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d404222c26f3ed14680df958b77bdc92
+      internalID: -9499213384602515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 570
+        width: 664
+        height: 1203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648a2e52fd729e845bb315e8d6e1d805
+      internalID: -4193788495723351461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4789
+        y: 578
+        width: 656
+        height: 1195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1256d4192529e94dae86d4404cad9c4
+      internalID: 735051053175428254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_Idle_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6789
+        y: 602
+        width: 648
+        height: 1195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e84ae721245352f48b0e0fafc3f8bfb2
+      internalID: 7003158398739430335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c25b951a28f891741a88bf5b1529a93c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

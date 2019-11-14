@@ -19,18 +19,21 @@ public class CameraWaypoint : MonoBehaviour
     private float newY;
 
     private GameObject camera;
+    private GameObject gameManager;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         camera = GameObject.Find("MegaCamera");
+        gameManager = GameObject.Find("Gamemanager");
         m_Renderer = player.GetComponent<Renderer>();
 
         if (StartingWaypoint)
         {
             float newX = camera.transform.position.x - prevCameraPos.transform.position.x;
             float newY = camera.transform.position.y - prevCameraPos.transform.position.y;
-            camera.transform.Translate(-newX, -newY, 0.0f);        }
+            camera.transform.Translate(-newX, -newY, 0.0f);
+        }
         if (nextCameraPos.tag == "CameraPosition")
         {
             //Debug.Log("tagem and bag em");
@@ -50,13 +53,13 @@ public class CameraWaypoint : MonoBehaviour
             {
                 Debug.Log("go foreward");
                 camera.transform.Translate(-newX, -newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
             }
             else if (nearNext)
             {
                 Debug.Log("go back");
                 camera.transform.Translate(newX, newY, 0.0f);
-                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
             //Debug.Log(prevCameraPos.transform.position.x);
         }
@@ -87,15 +90,15 @@ public class CameraWaypoint : MonoBehaviour
                 if (nearNext && playerNearPrev)
                 {
                     camera.transform.Translate(newX, newY, 0.0f);
-                    camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                    gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
                 }
                 else if (nearPrev && !playerNearPrev)
                 {
                     camera.transform.Translate(-newX, -newY, 0.0f);
-                    camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                    gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
                 }
             }
-        }            
+        }
     }
 
     private void CheckCameraLocation()
