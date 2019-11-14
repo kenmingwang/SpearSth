@@ -3717,21 +3717,6 @@ PrefabInstance:
       propertyPath: gravityModifier
       value: -9.8
       objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6556991258934261783, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 228852927}
-    - target: {fileID: 6942913847557883115, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: maxHealth
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 12233648871986295, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_audioClip
@@ -3788,12 +3773,6 @@ PrefabInstance:
 --- !u!1 &228852925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6556991258934261784, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-    type: 3}
-  m_PrefabInstance: {fileID: 228852924}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &228852927 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2153281386524299077, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
     type: 3}
   m_PrefabInstance: {fileID: 228852924}
   m_PrefabAsset: {fileID: 0}
@@ -20015,11 +19994,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.14156112
-      objectReference: {fileID: 0}
-    - target: {fileID: 8902981709484619472, guid: d17fb0c5861960c4a87e29762dc58e27,
-        type: 3}
-      propertyPath: speed
-      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d17fb0c5861960c4a87e29762dc58e27, type: 3}
@@ -39787,16 +39761,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 228852925}
-    - target: {fileID: 8238637782504402940, guid: 380134166ddc8e0409434dc0b840f119,
-        type: 3}
-      propertyPath: transportPeriod
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8238637782504402940, guid: 380134166ddc8e0409434dc0b840f119,
-        type: 3}
-      propertyPath: aimingPeriod
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8238637782504402939, guid: 380134166ddc8e0409434dc0b840f119,
         type: 3}
       propertyPath: m_IsTrigger

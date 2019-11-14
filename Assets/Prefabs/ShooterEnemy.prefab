@@ -310,8 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42cebdcd3ece6d4496b74873a14745e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transportPeriod: 5
-  aimingPeriod: 3
+  transportPeriod: 6
+  aimingPeriod: 4
   firstPlat: {fileID: 0}
   secondPlat: {fileID: 0}
   thirdPlat: {fileID: 0}

@@ -102,7 +102,7 @@ MonoBehaviour:
   gravityValue: -31.3
   gravityFallValue: -8.5
   maxSpeed: 7
-  jumpTakeOffSpeed: 14
+  jumpTakeOffSpeed: 12.5
   jumpDecay: 0.59
   airMovementMod: 0.69
   layerMask:
