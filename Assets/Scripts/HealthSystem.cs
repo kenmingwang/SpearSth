@@ -82,9 +82,14 @@ public class HealthSystem : MonoBehaviour
 
     private void Die(GameObject gameObj)
     {
-        if(gameObj.name == "ShooterEnemy")
+        var name = gameObj.name;
+        Debug.Log(name + " died");
+       // gameObj.SetActive(false);
+        if (name == "ShooterEnemy")
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().NextStage();
+            Debug.Log("next");
+
+            GameObject.Find("MegaCamera").GetComponent<GameManager>().NextStage();
         }
         Destroy(gameObj);
         Destroy(hbarObj);

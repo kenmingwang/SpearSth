@@ -131,6 +131,7 @@ public class EnemyShooter : MonoBehaviour
 
     public void ActivateShooter()
     {
+        Debug.Log("Activated");
         Activate = true;
     }
 

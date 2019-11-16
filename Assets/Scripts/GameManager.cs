@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
             Debug.Log(curCameraPos.transform.position);
-            QuitDialog.transform.position = curCameraPos.transform.position + new Vector3(0,0,1);
+            QuitDialog.transform.position = curCameraPos.transform.position + new Vector3(0, 0, 1);
             QuitDialog.SetActive(true);
             ActiveDialog = true;
         }
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
             QuitDialog.SetActive(true);
             ActiveDialog = true;
         }
-        if(ActiveDialog && Input.GetKeyDown(KeyCode.Q))
+        if (ActiveDialog && Input.GetKeyDown(KeyCode.Q))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             ContinueGame();
@@ -54,10 +54,7 @@ public class GameManager : MonoBehaviour
 
     public void NextStage()
     {
-        if(SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCount)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void PauseGame()
