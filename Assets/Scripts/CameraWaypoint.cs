@@ -34,10 +34,6 @@ public class CameraWaypoint : MonoBehaviour
             float newY = camera.transform.position.y - prevCameraPos.transform.position.y;
             camera.transform.Translate(-newX, -newY, 0.0f);
         }
-        if (nextCameraPos.tag == "CameraPosition")
-        {
-            //Debug.Log("tagem and bag em");
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -75,28 +71,32 @@ public class CameraWaypoint : MonoBehaviour
          */
         if (collision.gameObject.tag == "Player")
         {
+            CheckCameraLocation();
+            bool playerNearPrev;
+
             if (!VerticalWaypoint)
             {
-                CheckCameraLocation();
+                playerNearPrev = player.transform.position.x < this.transform.position.x;
+            } else
+            {
+                playerNearPrev = player.transform.position.y < this.transform.position.y;
+            }
 
-                bool playerNearPrev = player.transform.position.x < this.transform.position.x;
+            Debug.Log("playerNearPrev: " + playerNearPrev);
 
-                Debug.Log("playerNearPrev: " + playerNearPrev);
+            Debug.Log("nearNext: " + nearNext + " playerNearPrev: " + playerNearPrev);
 
-                Debug.Log("nearNext: " + nearNext + " playerNearPrev: " + playerNearPrev);
+            Debug.Log("nearPrev: " + nearPrev + " playerNearPrev: " + playerNearPrev);
 
-                Debug.Log("nearPrev: " + nearPrev + " playerNearPrev: " + playerNearPrev);
-
-                if (nearNext && playerNearPrev)
-                {
-                    camera.transform.Translate(newX, newY, 0.0f);
-                    gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
-                }
-                else if (nearPrev && !playerNearPrev)
-                {
-                    camera.transform.Translate(-newX, -newY, 0.0f);
-                    gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
-                }
+            if (nearNext && playerNearPrev)
+            {
+                camera.transform.Translate(newX, newY, 0.0f);
+                gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+            }
+            else if (nearPrev && !playerNearPrev)
+            {
+                camera.transform.Translate(-newX, -newY, 0.0f);
+                gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
         }
     }
