@@ -98,8 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
   SpearSpeed: 30
-  spearHit: {fileID: 8300000, guid: e7c4d44b9fa45024da5b9b0dc1f84b91, type: 3}
+  spearHitEnemy: {fileID: 0}
   throwAudio: {fileID: 8300000, guid: 71466ff1e23189341a569fd4a52bcb81, type: 3}
+  spearHitGround: {fileID: 8300000, guid: 85d04a376455f244ea62943a512502f3, type: 3}
 --- !u!50 &1147644898362161386
 Rigidbody2D:
   serializedVersion: 4

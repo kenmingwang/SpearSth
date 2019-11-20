@@ -9,9 +9,11 @@ public class Spear : MonoBehaviour
     public GameObject Player;
     public float SpearSpeed=30f;
 
-    public AudioClip spearHit;
+    public AudioClip spearHitEnemy;
     
     public AudioClip throwAudio;
+
+    public AudioClip spearHitGround;
     AudioSource audioSource;
 
     private Vector3 wallPos;
@@ -69,13 +71,14 @@ public class Spear : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ground")
         {
+            audioSource.PlayOneShot(spearHitGround, 0.08f);
             wallPos = transform.position;
             wallRot = transform.rotation;
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
             GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-            GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.1f);
+            GetComponent<BoxCollider2D>().size = new Vector2(2.6f, 0.1f);
         } 
         else if (collision.gameObject.tag == "Switch")
         {
@@ -114,8 +117,6 @@ public class Spear : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             collision.gameObject.GetComponent<HealthSystem>().Damaged(collision.gameObject);
-
-            audioSource.PlayOneShot(spearHit, 0.4f);
             Debug.Log("Hit Enemy");
 
         }

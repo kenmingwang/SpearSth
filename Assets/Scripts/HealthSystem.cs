@@ -22,6 +22,14 @@ public class HealthSystem : MonoBehaviour
     private float invincibleTime;
     private PhysicsPlayer player;
 
+    //controlls the audio of damage of the thing attached
+    AudioSource audioSource;
+
+    public AudioClip DmgSound;
+
+    public AudioClip DeathSound;
+
+
     public Vector2 offset;
 
     GameObject prefab;
@@ -38,6 +46,9 @@ public class HealthSystem : MonoBehaviour
             player = GameObject.Find("Player").GetComponent<PhysicsPlayer>();
         }
         Canvas = GameObject.Find("Canvas");
+
+        audioSource = GetComponent<AudioSource>();
+
         // Instantiate slider(healthbar)
         prefab = Resources.Load("HealthBar") as GameObject;
         hbarObj = Instantiate(prefab);
@@ -68,14 +79,21 @@ public class HealthSystem : MonoBehaviour
     public void Damaged(GameObject gameObj)
     {
         if (!invincible)
-        {
-            if (--currentHealth <= 0)
-            {
-                Die(gameObj);
-            }
+        {      
             if (isPlayer)
             {
                 WUDI();
+            }
+            if (--currentHealth <= 0)
+            {
+                if (!isPlayer)
+                {
+                    audioSource.PlayOneShot(DeathSound, 1f);
+                }
+                Die(gameObj);
+            } else if (!isPlayer)
+            {
+                audioSource.PlayOneShot(DmgSound, 1f);
             }
         }
     }
