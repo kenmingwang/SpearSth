@@ -77,8 +77,8 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
-            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-            GetComponent<BoxCollider2D>().size = new Vector2(2.6f, 0.1f);
+            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.2f);
+            GetComponent<BoxCollider2D>().size = new Vector2(8f, 0.5f);
         } 
         else if (collision.gameObject.tag == "Switch")
         {
@@ -96,8 +96,8 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Wall");
             isInWall = true;
             isThrowTriggered = false;
-            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0f);
-            GetComponent<BoxCollider2D>().size = new Vector2(1.3f, 0.1f);
+            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.2f);
+            GetComponent<BoxCollider2D>().size = new Vector2(8f, 0.5f);
           // transform.SetParent(collision.gameObject.transform);
         }
 
@@ -138,8 +138,8 @@ public class Spear : MonoBehaviour
     private void SetIsTrigger()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
-        GetComponent<BoxCollider2D>().offset = new Vector2(1f, 0f);
-        GetComponent<BoxCollider2D>().size = new Vector2(0.6f, 0.2f);
+        GetComponent<BoxCollider2D>().offset = new Vector2(0.3f, 0.3f);
+        GetComponent<BoxCollider2D>().size = new Vector2(9f, 0.7f);
     }
 
 
