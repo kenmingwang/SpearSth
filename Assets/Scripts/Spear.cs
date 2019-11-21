@@ -112,14 +112,8 @@ public class Spear : MonoBehaviour
         {
             //Debug.Log("Dank Release");
             collision.gameObject.GetComponent<EnvSwitch>().SwitchReleased();
-
         }
-        if (collision.gameObject.tag == "Enemy")
-        {
-            collision.gameObject.GetComponent<HealthSystem>().Damaged(collision.gameObject);
-            Debug.Log("Hit Enemy");
-
-        }
+        
 
     }
 
@@ -131,6 +125,11 @@ public class Spear : MonoBehaviour
             Debug.Log("Hit Player2D");
             Destroy(gameObject);
             Player.GetComponent<PhysicsPlayer>().SetSpearInHand();
+        }
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.gameObject.GetComponent<HealthSystem>().Damaged(collision.gameObject);
+            Debug.Log("Hit Enemy");
         }
     }
 

@@ -86,14 +86,15 @@ public class HealthSystem : MonoBehaviour
             }
             if (--currentHealth <= 0)
             {
+                //audioSource.PlayClipAtPoint(DeathSound, new Vector3(gameObj.transform.position.x, gameObj.transform.position.y, 0));
+
                 if (!isPlayer)
                 {
-                    audioSource.PlayOneShot(DeathSound, 1f);
                 }
                 Die(gameObj);
             } else if (!isPlayer)
             {
-                audioSource.PlayOneShot(DmgSound, 1f);
+                audioSource.PlayOneShot(DmgSound, 0.5f);
             }
         }
     }
