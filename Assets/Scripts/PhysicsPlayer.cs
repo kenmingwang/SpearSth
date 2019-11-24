@@ -65,7 +65,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         if (IsAlive())
         {
-            ComputeVelocity();
+            ComputeVelocity();                                                      
             CheckPlayerStatus();
             CheckSpearStatus();
         }
