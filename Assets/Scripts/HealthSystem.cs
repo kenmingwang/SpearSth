@@ -10,7 +10,7 @@ public class HealthSystem : MonoBehaviour
     // Start is called before the first frame update
     public float maxHealth;
     public bool isPlayer;
-    private float currentHealth { get; set; }
+    private float CurrentHealth { get; set; }
 
     private GameObject Canvas { get; set; }
     private GameObject hbarObj { get; set; }
@@ -60,7 +60,7 @@ public class HealthSystem : MonoBehaviour
         HealthBarFollow();
 
         // Set max health
-        currentHealth = maxHealth;
+        CurrentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         CalculateHealth();
 
@@ -84,7 +84,7 @@ public class HealthSystem : MonoBehaviour
             {
                 WUDI();
             }
-            if (--currentHealth <= 0)
+            if (--CurrentHealth <= 0)
             {
                 //audioSource.PlayClipAtPoint(DeathSound, new Vector3(gameObj.transform.position.x, gameObj.transform.position.y, 0));
 
@@ -121,7 +121,7 @@ public class HealthSystem : MonoBehaviour
 
     private void CalculateHealth()
     {
-        healthBar.value = currentHealth;
+        healthBar.value = CurrentHealth;
     }
 
     private void HealthBarFollow()
