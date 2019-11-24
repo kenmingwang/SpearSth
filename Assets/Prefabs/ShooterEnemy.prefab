@@ -323,14 +323,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42cebdcd3ece6d4496b74873a14745e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transportable: 1
   transportPeriod: 6
   aimingPeriod: 4
   firstPlat: {fileID: 0}
   secondPlat: {fileID: 0}
   thirdPlat: {fileID: 0}
-  offset: {x: 0, y: 0.8, z: 0}
+  offset: {x: 0, y: 1.1, z: 0}
   bulletPreafabTransform: {fileID: 1370294924317077669, guid: 2c12d913867dc474493575faf87832f2,
     type: 3}
+  animator: {fileID: 4362156180522502025}
 --- !u!114 &7209540557087985945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,6 +347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 2
   isPlayer: 0
+  DmgSound: {fileID: 0}
+  DeathSound: {fileID: 0}
   offset: {x: 0, y: 1}
 --- !u!95 &4362156180522502025
 Animator:

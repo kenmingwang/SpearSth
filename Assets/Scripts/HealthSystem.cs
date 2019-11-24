@@ -103,20 +103,21 @@ public class HealthSystem : MonoBehaviour
     {
         var name = gameObj.name;
         Debug.Log(name + " died");
-       // gameObj.SetActive(false);
+        // gameObj.SetActive(false);
+        if (name.Contains("WalkingEnemy"))
+        {
+            gameObj.GetComponent<EnemyWalker>().Die();
+        }
         if (name == "ShooterEnemy")
         {
-            GameObject.Find("MegaCamera").GetComponent<GameManager>().NextStage();
+            gameObj.GetComponent<EnemyShooter>().Die();
         }
         if(name == "Player")
         {
             gameObj.GetComponent<PhysicsPlayer>().Die();
-            Destroy(gameObj,3f);
-            Destroy(hbarObj, 3f);
-            return;
         }
-        Destroy(gameObj);
-        Destroy(hbarObj);
+        Destroy(gameObj, 2f);
+        Destroy(hbarObj, 2f);
     }
 
     private void CalculateHealth()

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
 {
+    public bool transportable;
+
     [Header("Time frames")]
     public float transportPeriod;
     private float timeLeft;
@@ -17,18 +19,26 @@ public class EnemyShooter : MonoBehaviour
     public GameObject secondPlat;
     public GameObject thirdPlat;
 
+
     [Header("Add some Y value so it stands on top")]
     public Vector3 offset;
     public GameObject bulletPreafabTransform;
 
+    public Animator animator;
     // Private vars
     private GameObject[] platToMove;
     private GameObject shootingTip;
     private GameObject bullet;
     private Vector2 prevPlayerTran;
     private float playerPrevTime = 0.1f;
-    
+    private bool isAlive = true;
+    private bool dying = false;
     private bool Activate = false;
+
+
+    float distance = 0.7f;
+    float beforeTrans;
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -37,26 +47,59 @@ public class EnemyShooter : MonoBehaviour
     }
     void Start()
     {
+        beforeTrans = transform.position.y;
         shootingTip = GameObject.Find("shootingTip");
         timeLeft = transportPeriod;
         aimingLeft = aimingPeriod;
         platToMove = new GameObject[3];
-        platToMove[0] = firstPlat;
-        platToMove[1] = secondPlat;
-        platToMove[2] = thirdPlat;
+        if (firstPlat != null && secondPlat != null && thirdPlat != null)
+        {
+            platToMove[0] = firstPlat;
+            platToMove[1] = secondPlat;
+            platToMove[2] = thirdPlat;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Activate)
+        if (Activate &&isAlive)
         {
-            TransportInPeriod();
-            Aim(GetPrePlayerTran());
-            Shoot();
+            if (transportable)
+            {
+                TransportInPeriod();
+                Aim(GetPrePlayerTran());
+                Shoot();
+            }
+            else
+            {
+                Aim(GetPrePlayerTran());
+                Shoot();
+            }
         }
+        else if (dying)
+        {
+            if (beforeTrans - transform.position.y < 0.7)
+                transform.position -= new Vector3(0, 0.9f, 0) * Time.deltaTime;
+        }
+
+
     }
 
+    public void Die()
+    {
+        GetComponent<BoxCollider2D>().offset = new Vector2(-0.3f, 1.6f);
+        GetComponent<BoxCollider2D>().size = new Vector2(12f, 4f);
+        animator.SetTrigger("dying");
+        isAlive = false;
+        dying = true;
+    }
+
+    public bool IsAlive()
+    {
+        return isAlive;
+    }
     private Vector2 GetPrePlayerTran()
     {
         playerPrevTime -= Time.deltaTime;
@@ -81,7 +124,6 @@ public class EnemyShooter : MonoBehaviour
             timeLeft -= Time.deltaTime;
             if (timeLeft < 0)
             {
-                Debug.Log("tp");
                 transform.position = p.transform.position + offset;
                 timeLeft = transportPeriod;
             }
@@ -134,5 +176,5 @@ public class EnemyShooter : MonoBehaviour
         Debug.Log("Activated");
         Activate = true;
     }
-
 }
+

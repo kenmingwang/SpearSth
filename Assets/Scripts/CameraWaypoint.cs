@@ -25,7 +25,7 @@ public class CameraWaypoint : MonoBehaviour
     {
         player = GameObject.Find("Player");
         camera = GameObject.Find("MegaCamera");
-        gameManager = GameObject.Find("Gamemanager");
+
         m_Renderer = player.GetComponent<Renderer>();
 
         if (StartingWaypoint)
@@ -49,13 +49,13 @@ public class CameraWaypoint : MonoBehaviour
             {
                 Debug.Log("go foreward");
                 camera.transform.Translate(-newX, -newY, 0.0f);
-                gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
             }
             else if (nearNext)
             {
                 Debug.Log("go back");
                 camera.transform.Translate(newX, newY, 0.0f);
-                gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
             //Debug.Log(prevCameraPos.transform.position.x);
         }

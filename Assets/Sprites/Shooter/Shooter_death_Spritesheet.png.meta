@@ -1,34 +1,34 @@
 fileFormatVersion: 2
-guid: 51e5407890e015e44b59db9b6c90fcc5
+guid: 813f1042047f4ea4c82baac9a2064d1c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4741185677708507868
-    second: Melee_die_spritesheet_0
+      213: 8601315010823745991
+    second: Shooter_death_Spritesheet_0
   - first:
-      213: -1101366270865745029
-    second: Melee_die_spritesheet_1
+      213: -7810369065738238711
+    second: Shooter_death_Spritesheet_1
   - first:
-      213: 9093710801032155184
-    second: Melee_die_spritesheet_2
+      213: -3808224981258219858
+    second: Shooter_death_Spritesheet_2
   - first:
-      213: 229209822650749648
-    second: Melee_die_spritesheet_3
+      213: 1361630411110946233
+    second: Shooter_death_Spritesheet_3
   - first:
-      213: -9062113673408854092
-    second: Melee_die_spritesheet_4
+      213: -3331578951937825106
+    second: Shooter_death_Spritesheet_4
   - first:
-      213: -6021113836073707707
-    second: Melee_die_spritesheet_5
+      213: 7963544656712661952
+    second: Shooter_death_Spritesheet_5
   - first:
-      213: 1471380438257434117
-    second: Melee_die_spritesheet_6
+      213: 8638314276391970097
+    second: Shooter_death_Spritesheet_6
   - first:
-      213: 7973896586704212301
-    second: Melee_die_spritesheet_7
+      213: 3562734263922859220
+    second: Shooter_death_Spritesheet_7
   - first:
-      213: -7881794298750653415
-    second: Melee_die_spritesheet_8
+      213: -3289727094763182172
+    second: Shooter_death_Spritesheet_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -125,13 +125,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Melee_die_spritesheet_0
+      name: Shooter_death_Spritesheet_0
       rect:
         serializedVersion: 2
         x: 773
-        y: 2609
-        width: 657
-        height: 1188
+        y: 2555
+        width: 719
+        height: 1133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc47cfadbc78ba04ebe4f2a972e853a1
-      internalID: 4741185677708507868
+      spriteID: a6e1efcbca1a66d488797893aac37a8d
+      internalID: 8601315010823745991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_1
+      name: Shooter_death_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2742
-        y: 2609
-        width: 711
-        height: 1086
+        x: 2648
+        y: 2555
+        width: 977
+        height: 1047
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc67879d6f081640a4aab1f98521e56
-      internalID: -1101366270865745029
+      spriteID: b66e2e7533b7cd84890038214a68d2c2
+      internalID: -7810369065738238711
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_2
+      name: Shooter_death_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 4586
-        y: 2609
-        width: 1023
-        height: 1118
+        x: 4555
+        y: 2555
+        width: 945
+        height: 867
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d4507ce363612e46a8c8964ac9dcca4
-      internalID: 9093710801032155184
+      spriteID: badf1cc096821734981e47d9b5ad5561
+      internalID: -3808224981258219858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_3
+      name: Shooter_death_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 6438
-        y: 2609
-        width: 1117
-        height: 977
+        x: 6516
+        y: 2555
+        width: 1054
+        height: 765
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6547c706b7c645c428277407e06e224f
-      internalID: 229209822650749648
+      spriteID: a58cfe7d125afec41b082c323a260cb4
+      internalID: 1361630411110946233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_4
+      name: Shooter_death_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 8461
-        y: 2609
+        x: 8492
+        y: 2555
+        width: 1125
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b0c1c93c1c12f4f9eb26dde7b7fb6a
+      internalID: -3331578951937825106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_death_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 10633
+        y: 2555
         width: 1187
-        height: 914
+        height: 429
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f121c0bec286acb478151720dfe84836
-      internalID: -9062113673408854092
+      spriteID: e828d6dc7abee06489e1e1563af2630f
+      internalID: 7963544656712661952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_5
+      name: Shooter_death_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 10469
-        y: 2609
-        width: 1234
-        height: 680
+        x: 12523
+        y: 2469
+        width: 1204
+        height: 476
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,40 +265,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0df4aff7cbfa244a99ebfc199e39277
-      internalID: -6021113836073707707
+      spriteID: 085d45a0ed9a0a84c9af96ebb92976fd
+      internalID: 8638314276391970097
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Melee_die_spritesheet_6
+      name: Shooter_death_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 12609
-        y: 2609
+        x: 14586
+        y: 2469
+        width: 1219
+        height: 484
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d7170dc3db3e242a53153ed4040049
+      internalID: 3562734263922859220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shooter_death_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 320
         width: 1227
-        height: 579
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c382c484036f371439b9ce5a9f22ecbd
-      internalID: 1471380438257434117
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_die_spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 14453
-        y: 2609
-        width: 1242
         height: 571
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -286,29 +307,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11daa45c574ba7f4b8c1a3a5a04f9c78
-      internalID: 7973896586704212301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Melee_die_spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 484
-        y: 555
-        width: 1243
-        height: 461
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 08fcb211068269e4184400a1ab3974de
-      internalID: -7881794298750653415
+      spriteID: a20d780d44d999a4098b936a80e47127
+      internalID: -3289727094763182172
       vertices: []
       indices: 
       edges: []
@@ -316,7 +316,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5404b395158dead49b0f29c017b285ce
     internalID: 0
     vertices: []
     indices: 

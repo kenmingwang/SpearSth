@@ -13,6 +13,7 @@ public class ShooterActivate : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        shooter.GetComponent<EnemyShooter>().ActivateShooter();
+        if (collision.name == "Player")
+            shooter.GetComponent<EnemyShooter>().ActivateShooter();
     }
 }
