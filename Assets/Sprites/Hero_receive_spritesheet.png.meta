@@ -1,12 +1,63 @@
 fileFormatVersion: 2
 guid: 1c3442348755c9d4990c50ac531f9ea0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5095903007234283252
+    second: Hero_receive_spritesheet_0
+  - first:
+      213: -8444107897758838278
+    second: Hero_receive_spritesheet_1
+  - first:
+      213: 8521697174877997593
+    second: Hero_receive_spritesheet_2
+  - first:
+      213: -1649969262667896127
+    second: Hero_receive_spritesheet_3
+  - first:
+      213: -3376816387298844352
+    second: Hero_receive_spritesheet_4
+  - first:
+      213: -4759492022299745599
+    second: Hero_receive_spritesheet_5
+  - first:
+      213: 3247603452332172959
+    second: Hero_receive_spritesheet_6
+  - first:
+      213: 9037552238489867741
+    second: Hero_receive_spritesheet_7
+  - first:
+      213: 8697483346157887348
+    second: Hero_receive_spritesheet_8
+  - first:
+      213: 5810473462864493470
+    second: Hero_receive_spritesheet_9
+  - first:
+      213: -8649889791660539606
+    second: Hero_receive_spritesheet_10
+  - first:
+      213: -2862741771011078016
+    second: Hero_receive_spritesheet_11
+  - first:
+      213: -5615502318413220336
+    second: Hero_receive_spritesheet_12
+  - first:
+      213: -1443196387210709017
+    second: Hero_receive_spritesheet_13
+  - first:
+      213: -5036952598049147933
+    second: Hero_receive_spritesheet_14
+  - first:
+      213: -3189890491475944394
+    second: Hero_receive_spritesheet_15
+  - first:
+      213: 6744075239195290838
+    second: Hero_receive_spritesheet_16
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -31,27 +82,27 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.5239626, y: 0.5353135}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -70,13 +121,394 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 2586
+        width: 469
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd94fa9caf5543478ed1bfd1d8737e4
+      internalID: 5095903007234283252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2805
+        y: 2586
+        width: 468
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3760cab596ae30e47a62b58e779e98f7
+      internalID: -8444107897758838278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 4750
+        y: 2586
+        width: 453
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9327cc50596411f4e97840e6789a0960
+      internalID: 8521697174877997593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6781
+        y: 2586
+        width: 492
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa6e61cf39f1be64eb1a715f0f42e768
+      internalID: -1649969262667896127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 8828
+        y: 2586
+        width: 539
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a25cb31970817c409a184aa8dcba278
+      internalID: -3376816387298844352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 10805
+        y: 2586
+        width: 554
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485e96fb7b4291d4f99f74fc991835af
+      internalID: -4759492022299745599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 12836
+        y: 2586
+        width: 562
+        height: 1281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b2edf69e0b4da459ebc8754e1bc3ed
+      internalID: 3247603452332172959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 14875
+        y: 2586
+        width: 539
+        height: 1281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e4ae01d912aba4b8ce5b534e2b4e45
+      internalID: 9037552238489867741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 578
+        width: 524
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3489f0aca69e44fb04e88bda21cacf
+      internalID: 8697483346157887348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 578
+        width: 524
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5527afec0d20c394185ef2d675c720a7
+      internalID: 5810473462864493470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4734
+        y: 578
+        width: 516
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1dc9d346501dce4199d13c5a79e50f4
+      internalID: -8649889791660539606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6813
+        y: 578
+        width: 460
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb8d4f54289a2c459c3a670fa247f01
+      internalID: -2862741771011078016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 8891
+        y: 570
+        width: 476
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a3349b255fd2442b508359d0a867d8
+      internalID: -5615502318413220336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 10844
+        y: 578
+        width: 515
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c4b7895b8a7bd49a3e0883e9327618
+      internalID: -1443196387210709017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 12891
+        y: 578
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0e55e588683244985c9319dfe11832
+      internalID: -5036952598049147933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 14563
+        y: 578
+        width: 960
+        height: 1281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7dd95f63bbc3c448dc6e6fe7155649
+      internalID: -3189890491475944394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hero_receive_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 15315
+        y: 0
+        width: 685
+        height: 1415
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 619a3ec195cbdb442a04a5a823610fde
+      internalID: 6744075239195290838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 

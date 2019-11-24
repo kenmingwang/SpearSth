@@ -63,9 +63,16 @@ public class PhysicsPlayer : PhysicsObject
 
     private void Update()
     {
-        ComputeVelocity();
-        CheckPlayerStatus();
-        CheckSpearStatus();
+        if (IsAlive())
+        {
+            ComputeVelocity();
+            CheckPlayerStatus();
+            CheckSpearStatus();
+        }
+        else
+        {
+            targetVelocity = Vector2.zero;
+        }
     }
     internal void SetSpearInHand()
     {
@@ -80,8 +87,8 @@ public class PhysicsPlayer : PhysicsObject
         {
             //Debug.Log("move");
             move.x = Input.GetAxis("Horizontal");
-             animator.SetFloat("running", Mathf.Abs(move.x));
-             animator.SetBool("jumping",false);
+            animator.SetFloat("running", Mathf.Abs(move.x));
+            animator.SetBool("jumping", false);
 
         }
         else
@@ -165,7 +172,7 @@ public class PhysicsPlayer : PhysicsObject
         }
         else
         {
-           //    animator.SetBool("throwing", false);
+            //    animator.SetBool("throwing", false);
         }
     }
 
@@ -181,6 +188,9 @@ public class PhysicsPlayer : PhysicsObject
     public void Die()
     {
         PlayerAlive = false;
+        GetComponent<BoxCollider2D>().offset = new Vector2(-0.3f, -0.03f);
+        GetComponent<BoxCollider2D>().size = new Vector2(12f, 4f);
+        animator.SetTrigger("dying");
     }
 
     public bool IsAlive()
