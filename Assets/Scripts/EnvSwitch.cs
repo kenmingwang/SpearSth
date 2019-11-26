@@ -7,7 +7,18 @@ public class EnvSwitch : MonoBehaviour
     [SerializeField]
     public GameObject doorAttached;
 
+    private AudioSource audioSource;
+
+    public AudioClip audioOpen;
+
+    public AudioClip audioClose;
+
     private bool doorDown = true;
+
+    public void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     public void SwitchPressed()
     {
@@ -15,6 +26,7 @@ public class EnvSwitch : MonoBehaviour
         {
             //doorAttached = GameObject.Find("Door");
             Debug.Log("Hit button");
+            audioSource.PlayOneShot(audioOpen);
             doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
             doorDown = false;
         }
@@ -25,6 +37,7 @@ public class EnvSwitch : MonoBehaviour
         if (!doorDown)
         {
             doorAttached.transform.Translate(Vector2.left * 100 * Time.deltaTime);
+            audioSource.PlayOneShot(audioClose);
             doorDown = true;
         }
     }

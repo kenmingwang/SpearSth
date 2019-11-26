@@ -29,6 +29,7 @@ public class HealthSystem : MonoBehaviour
 
     public AudioClip DeathSound;
 
+    private bool playedDeathSound = false;
 
     public Vector2 offset;
 
@@ -84,18 +85,21 @@ public class HealthSystem : MonoBehaviour
             {
                 WUDI();
             }
-            if (--CurrentHealth <= 0)
+            if (!playedDeathSound)
             {
-                //audioSource.PlayClipAtPoint(DeathSound, new Vector3(gameObj.transform.position.x, gameObj.transform.position.y, 0));
-
-                if (!isPlayer)
+                if (--CurrentHealth <= 0)
                 {
+                    AudioSource.PlayClipAtPoint(DeathSound, new Vector3(this.transform.position.x, this.transform.position.y, 0));
+
+                    playedDeathSound = true;
+
+                    Die(gameObj);
                 }
-                Die(gameObj);
-            } else if (!isPlayer)
-            {
-                audioSource.PlayOneShot(DmgSound, 0.5f);
-            }
+                else
+                {
+                    audioSource.PlayOneShot(DmgSound, 0.5f);
+                }
+            } 
         }
     }
 

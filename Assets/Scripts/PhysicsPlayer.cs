@@ -33,6 +33,8 @@ public class PhysicsPlayer : PhysicsObject
 
     public AudioClip throwAudio;
 
+    public AudioClip jumpAudio;
+
     AudioSource audioSource;
 
     /* Spear related fields */
@@ -57,7 +59,7 @@ public class PhysicsPlayer : PhysicsObject
     {
         prefSpear = Resources.Load("Spear") as GameObject;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
         // animator = GetComponent<Animator>();
     }
 
@@ -103,6 +105,7 @@ public class PhysicsPlayer : PhysicsObject
         {
             Debug.Log("jump");
             velocity.y = jumpTakeOffSpeed;
+            audioSource.PlayOneShot(jumpAudio, 0.25f);
             animator.SetBool("jumping", true);
 
         }
