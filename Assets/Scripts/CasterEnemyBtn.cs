@@ -7,6 +7,8 @@ public class CasterEnemyBtn : MonoBehaviour
 {
     public GameObject btn_one;
     public GameObject btn_two;
+    public GameObject SpawnDoor;
+    public GameObject Enemy;
 
     public Material hitShader;
     public Material normalShader;
@@ -15,6 +17,7 @@ public class CasterEnemyBtn : MonoBehaviour
     private Renderer rend_two;
     private int counter;
     private float countDown;
+    private float spwanCountDown;
     private bool hit = false;
     // Start is called before the first frame update
     void Start()
@@ -23,11 +26,13 @@ public class CasterEnemyBtn : MonoBehaviour
         rend_two = btn_two.GetComponent<Renderer>();
         counter = 0;
         countDown = 5f;
+        spwanCountDown = 1f;
     }
 
     // Update is called once per frame
     void Update()
     {
+        SpawnEnemy();
         if (counter == 2)
         {
             counter = 0;
@@ -65,7 +70,20 @@ public class CasterEnemyBtn : MonoBehaviour
     {
         rend_one.material = normalShader;
         rend_two.material = normalShader;
+        countDown = 5f;
         hit = false;
 
+    }
+
+    private void SpawnEnemy()
+    {
+        spwanCountDown -= Time.deltaTime;
+        if(spwanCountDown < 0)
+        {
+            spwanCountDown = 1f;
+            Vector3 pos = new Vector3(SpawnDoor.transform.position.x, SpawnDoor.transform.position.y + 0.1f, SpawnDoor.transform.position.z);
+            
+            Instantiate(Enemy, pos, new Quaternion());
+        }
     }
 }
