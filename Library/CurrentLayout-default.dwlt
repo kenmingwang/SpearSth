@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
-    y: 43.2
-    width: 2752
-    height: 1068.8
+    x: 8
+    y: 51
+    width: 2544
+    height: 1069
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
@@ -69,7 +69,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2752
+    width: 2544
     height: 1069
   m_MinSize: {x: 950, y: 544}
   m_MaxSize: {x: 10000, y: 10000}
@@ -90,7 +90,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 2752
+    width: 2544
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 1049
-    width: 2752
+    width: 2544
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -135,7 +135,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-    width: 2752
+    width: 2544
     height: 1019
   m_MinSize: {x: 879, y: 494}
   m_MaxSize: {x: 16004, y: 14044}
@@ -912,7 +912,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: E:\repos\Unity\SpearSth
+  m_LastProjectPath: D:\file\github\SpearSth
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
