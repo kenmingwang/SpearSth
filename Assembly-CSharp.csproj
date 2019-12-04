@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\PhysicsPlayer.cs" />
     <Compile Include="Assets\Scripts\ShooterActivate.cs" />
     <Compile Include="Assets\Scripts\Spear.cs" />
+    <Compile Include="Assets\Scripts\SpeedZone.cs" />
     <Compile Include="Assets\Scripts\TripTurret.cs" />
     <Compile Include="Assets\SpriteParticleEmitter\Code - Legacy\Core\EmitterBase.cs" />
     <Compile Include="Assets\SpriteParticleEmitter\Code - Legacy\Core\EmitterBaseUI.cs" />
