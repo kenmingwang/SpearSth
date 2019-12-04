@@ -100,6 +100,17 @@ public class Spear : MonoBehaviour
             GetComponent<BoxCollider2D>().size = new Vector2(8f, 0.5f);
           // transform.SetParent(collision.gameObject.transform);
         }
+        else if(collision.gameObject.tag == "CasterBtn")
+        {
+            wallPos = transform.position;
+            wallRot = transform.rotation;
+            isInWall = true;
+            isThrowTriggered = false;
+            GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.2f);
+            GetComponent<BoxCollider2D>().size = new Vector2(8f, 0.5f);
+
+            collision.gameObject.GetComponentInParent<CasterEnemyBtn>().BtnHit(collision.gameObject);
+        }
 
     }
 

@@ -12,6 +12,7 @@ TagManager:
   - Hazard
   - CameraPosition
   - MovingPlat
+  - CasterBtn
   layers:
   - Default
   - TransparentFX

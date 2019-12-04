@@ -105,7 +105,7 @@ public class PhysicsPlayer : PhysicsObject
         {
             Debug.Log("jump");
             velocity.y = jumpTakeOffSpeed;
-            audioSource.PlayOneShot(jumpAudio, 0.25f);
+            // audioSource.PlayOneShot(jumpAudio, 0.25f);
             animator.SetBool("jumping", true);
 
         }
