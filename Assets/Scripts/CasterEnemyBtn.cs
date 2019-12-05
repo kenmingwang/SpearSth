@@ -6,7 +6,9 @@ using UnityEngine;
 public class CasterEnemyBtn : MonoBehaviour
 {
     public GameObject btn_one;
+    private bool btn_one_hit;
     public GameObject btn_two;
+    private bool btn_two_hit;
     public GameObject SpawnDoor;
     public GameObject Enemy;
     public Animator ani;
@@ -29,8 +31,8 @@ public class CasterEnemyBtn : MonoBehaviour
         rend_one = btn_one.GetComponent<Renderer>();
         rend_two = btn_two.GetComponent<Renderer>();
         counter = 0;
-        countDown = 5f;
-        spwanCountDown = 1f;
+        countDown = 10f;
+        spwanCountDown = 2f;
         castCounDown = 3f;
         
     }
@@ -57,13 +59,20 @@ public class CasterEnemyBtn : MonoBehaviour
     }
     public void BtnHit(GameObject btn)
     {
-        if (btn == btn_one)
+        if (btn == btn_one && !btn_one_hit)
+        {
+            btn_one_hit = true;
             rend_one.material = hitShader;
-        else
+            hit = true;
+            counter++;
+        }  
+        else if(btn == btn_two && !btn_two_hit)
+        {
+            btn_two_hit = true;
             rend_two.material = hitShader;
-
-        counter++;
-        hit = true;
+            hit = true;
+            counter++;
+        }
     }
 
     private void CountDownStart()
@@ -71,7 +80,7 @@ public class CasterEnemyBtn : MonoBehaviour
         countDown -= Time.deltaTime;
         if(countDown < 0)
         {
-            countDown = 5f;
+            countDown = 10f;
             counter = 0;
             ResetBtn();
         }
@@ -81,6 +90,8 @@ public class CasterEnemyBtn : MonoBehaviour
     {
         rend_one.material = normalShader;
         rend_two.material = normalShader;
+        btn_one_hit = false;
+        btn_two_hit = false;
         countDown = 5f;
         hit = false;
 
@@ -92,7 +103,7 @@ public class CasterEnemyBtn : MonoBehaviour
         if(castCounDown < 0)
         {
             ani.SetTrigger("Cast");
-            castCounDown = 10f;
+            castCounDown = 13f;
             casting = true;
             spawnCounter = 0;
         }
@@ -103,7 +114,7 @@ public class CasterEnemyBtn : MonoBehaviour
         spwanCountDown -= Time.deltaTime;
         if(spwanCountDown < 0)
         {
-            spwanCountDown = 1f;
+            spwanCountDown = 2f;
             Vector3 pos = new Vector3(SpawnDoor.transform.position.x, SpawnDoor.transform.position.y + 0.1f, SpawnDoor.transform.position.z);
             
             Instantiate(Enemy, pos, new Quaternion());

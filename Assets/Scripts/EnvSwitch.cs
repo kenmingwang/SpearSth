@@ -27,7 +27,7 @@ public class EnvSwitch : MonoBehaviour
             //doorAttached = GameObject.Find("Door");
             Debug.Log("Hit button");
             audioSource.PlayOneShot(audioOpen);
-            doorAttached.transform.Translate(Vector2.right * 100 * Time.deltaTime);
+            doorAttached.transform.Translate(Vector2.up * 100 * Time.deltaTime);
             doorDown = false;
         }
     }
@@ -36,7 +36,7 @@ public class EnvSwitch : MonoBehaviour
     {
         if (!doorDown)
         {
-            doorAttached.transform.Translate(Vector2.left * 100 * Time.deltaTime);
+            doorAttached.transform.Translate(Vector2.down * 100 * Time.deltaTime);
             audioSource.PlayOneShot(audioClose);
             doorDown = true;
         }
