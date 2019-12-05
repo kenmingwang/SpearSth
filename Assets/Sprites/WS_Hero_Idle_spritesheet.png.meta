@@ -1,0 +1,487 @@
+fileFormatVersion: 2
+guid: 38bd48535d9e5441dbe0c427947020c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8533320754989203930
+    second: WS_Hero_Idle_spritesheet_0
+  - first:
+      213: -6816393484292709629
+    second: WS_Hero_Idle_spritesheet_1
+  - first:
+      213: 4994090809757886596
+    second: WS_Hero_Idle_spritesheet_2
+  - first:
+      213: 7151642734829895938
+    second: WS_Hero_Idle_spritesheet_3
+  - first:
+      213: 4224659210960717910
+    second: WS_Hero_Idle_spritesheet_4
+  - first:
+      213: -5652174091995422240
+    second: WS_Hero_Idle_spritesheet_5
+  - first:
+      213: -1731424192216878142
+    second: WS_Hero_Idle_spritesheet_6
+  - first:
+      213: 642990798581588820
+    second: WS_Hero_Idle_spritesheet_7
+  - first:
+      213: -2963264815411353607
+    second: WS_Hero_Idle_spritesheet_8
+  - first:
+      213: -1192289379952341297
+    second: WS_Hero_Idle_spritesheet_9
+  - first:
+      213: 6432306795554046407
+    second: WS_Hero_Idle_spritesheet_10
+  - first:
+      213: 314394560557812316
+    second: WS_Hero_Idle_spritesheet_11
+  - first:
+      213: 3522252350970315453
+    second: WS_Hero_Idle_spritesheet_12
+  - first:
+      213: -2919869273024891056
+    second: WS_Hero_Idle_spritesheet_13
+  - first:
+      213: 1533193138015734841
+    second: WS_Hero_Idle_spritesheet_14
+  - first:
+      213: 3018213333045869847
+    second: WS_Hero_Idle_spritesheet_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 2582
+        width: 477
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3214ca8863e4c71b253c2133fc1b84
+      internalID: -8533320754989203930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 2762
+        y: 2582
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb73e62eb69574348a9d87e03b00ae54
+      internalID: -6816393484292709629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 4754
+        y: 2582
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773294dc08d8745398e74c672589a214
+      internalID: 4994090809757886596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 6723
+        y: 2582
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aeb11b82a3394f1aab266fc7f1d7c86
+      internalID: 7151642734829895938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 8785
+        y: 2582
+        width: 485
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617160682f59c4567a700a5411354500
+      internalID: 4224659210960717910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 10902
+        y: 2574
+        width: 485
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fdc93ee82494ee8ac01fefa9e7c274
+      internalID: -5652174091995422240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 12793
+        y: 2574
+        width: 484
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb0d4170fd894bd1b572a39bdcab21c
+      internalID: -1731424192216878142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 14863
+        y: 2574
+        width: 485
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33ce5869994f4f65b7919131dfcaea4
+      internalID: 642990798581588820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 574
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c55f3550c62c4eedb722143d5c7260f
+      internalID: -2963264815411353607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 2777
+        y: 582
+        width: 485
+        height: 1297
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b9fb723e1a644148805551e347948d
+      internalID: -1192289379952341297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 4793
+        y: 574
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75aae2ecdbe3c4ddcb7114a3fbb23431
+      internalID: 6432306795554046407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 6746
+        y: 574
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a68800edc2aa4b0ba1a61c23f215020
+      internalID: 314394560557812316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 9012
+        y: 582
+        width: 476
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3f92961562d459c9f5a84aedc518c5
+      internalID: 3522252350970315453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 10887
+        y: 590
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c8da34bed6c4bcbb3310a29db4da26
+      internalID: -2919869273024891056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 12879
+        y: 582
+        width: 476
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93f367c2ca7f456293477b745e1bd9f
+      internalID: 1533193138015734841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WS_Hero_Idle_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 14832
+        y: 574
+        width: 484
+        height: 1289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1affc3c23189d4bcf8fa800a4509f49e
+      internalID: 3018213333045869847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ac51517a8fc5d4b32a75380fbb5c7a5e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
