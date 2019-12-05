@@ -50,6 +50,12 @@ public class GameManager : MonoBehaviour
             ActiveDialog = false;
 
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        }
     }
 
     public void NextStage()

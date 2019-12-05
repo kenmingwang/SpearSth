@@ -1,55 +1,46 @@
 fileFormatVersion: 2
-guid: 38bd48535d9e5441dbe0c427947020c8
+guid: 91b238a690a7c4b0b8968d2ce88db7b5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8533320754989203930
-    second: WS_Hero_Idle_spritesheet_0
+      213: 6290317172362308468
+    second: ElectricTrapSpriteSheet_0
   - first:
-      213: -6816393484292709629
-    second: WS_Hero_Idle_spritesheet_1
+      213: 6165539036023161360
+    second: ElectricTrapSpriteSheet_1
   - first:
-      213: 4994090809757886596
-    second: WS_Hero_Idle_spritesheet_2
+      213: -8455456883031613626
+    second: ElectricTrapSpriteSheet_2
   - first:
-      213: 7151642734829895938
-    second: WS_Hero_Idle_spritesheet_3
+      213: 6675741413013089349
+    second: ElectricTrapSpriteSheet_3
   - first:
-      213: 4224659210960717910
-    second: WS_Hero_Idle_spritesheet_4
+      213: -8759719555342800878
+    second: ElectricTrapSpriteSheet_4
   - first:
-      213: -5652174091995422240
-    second: WS_Hero_Idle_spritesheet_5
+      213: -9208531296484213102
+    second: ElectricTrapSpriteSheet_5
   - first:
-      213: -1731424192216878142
-    second: WS_Hero_Idle_spritesheet_6
+      213: -4519160159948787495
+    second: ElectricTrapSpriteSheet_6
   - first:
-      213: 642990798581588820
-    second: WS_Hero_Idle_spritesheet_7
+      213: -7587846074829528342
+    second: ElectricTrapSpriteSheet_7
   - first:
-      213: -2963264815411353607
-    second: WS_Hero_Idle_spritesheet_8
+      213: 5956972272798416
+    second: ElectricTrapSpriteSheet_8
   - first:
-      213: -1192289379952341297
-    second: WS_Hero_Idle_spritesheet_9
+      213: -1977697769094404308
+    second: ElectricTrapSpriteSheet_9
   - first:
-      213: 6432306795554046407
-    second: WS_Hero_Idle_spritesheet_10
+      213: -5484501550466122254
+    second: ElectricTrapSpriteSheet_10
   - first:
-      213: 314394560557812316
-    second: WS_Hero_Idle_spritesheet_11
+      213: -3532148579710991897
+    second: ElectricTrapSpriteSheet_11
   - first:
-      213: 3522252350970315453
-    second: WS_Hero_Idle_spritesheet_12
-  - first:
-      213: -2919869273024891056
-    second: WS_Hero_Idle_spritesheet_13
-  - first:
-      213: 1533193138015734841
-    second: WS_Hero_Idle_spritesheet_14
-  - first:
-      213: 3018213333045869847
-    second: WS_Hero_Idle_spritesheet_15
+      213: -3001664178699906839
+    second: ElectricTrapSpriteSheet_12
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -134,337 +125,274 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_0
+      name: ElectricTrapSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 707
-        y: 2582
-        width: 477
-        height: 1289
+        x: 14
+        y: 0
+        width: 812
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b3214ca8863e4c71b253c2133fc1b84
-      internalID: -8533320754989203930
+      spriteID: dbba89ba2b03e411cb0c75a88ef93fd2
+      internalID: 6290317172362308468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_1
+      name: ElectricTrapSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 2762
-        y: 2582
-        width: 484
-        height: 1289
+        x: 975
+        y: 0
+        width: 956
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb73e62eb69574348a9d87e03b00ae54
-      internalID: -6816393484292709629
+      spriteID: ba1d62478a2844349b47b9cdbed17f0b
+      internalID: 6165539036023161360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_2
+      name: ElectricTrapSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 4754
-        y: 2582
-        width: 484
-        height: 1289
+        x: 2123
+        y: 0
+        width: 905
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 773294dc08d8745398e74c672589a214
-      internalID: 4994090809757886596
+      spriteID: e44b87b3cbc0f480ab96972504a343a2
+      internalID: -8455456883031613626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_3
+      name: ElectricTrapSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 6723
-        y: 2582
-        width: 484
-        height: 1289
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3169
+        y: 0
+        width: 804
+        height: 1000
+      alignment: 9
+      pivot: {x: 0.4841017, y: 0.49999988}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2aeb11b82a3394f1aab266fc7f1d7c86
-      internalID: 7151642734829895938
+      spriteID: 1bfeaae42847647e5a7722207aff023f
+      internalID: 6675741413013089349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_4
+      name: ElectricTrapSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 8785
-        y: 2582
-        width: 485
-        height: 1289
+        x: 4170
+        y: 0
+        width: 820
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617160682f59c4567a700a5411354500
-      internalID: 4224659210960717910
+      spriteID: 9105186b2a6554582bbb869aeefa5f28
+      internalID: -8759719555342800878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_5
+      name: ElectricTrapSpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 10902
-        y: 2574
-        width: 485
-        height: 1297
+        x: 5033
+        y: 947
+        width: 24
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70fdc93ee82494ee8ac01fefa9e7c274
-      internalID: -5652174091995422240
+      spriteID: e671f67871aeb477aada7a5c0ca82832
+      internalID: -9208531296484213102
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_6
+      name: ElectricTrapSpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 12793
-        y: 2574
-        width: 484
-        height: 1297
+        x: 5092
+        y: 0
+        width: 848
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eb0d4170fd894bd1b572a39bdcab21c
-      internalID: -1731424192216878142
+      spriteID: 8de5741237f2a4a08a2ea563cabff71b
+      internalID: -4519160159948787495
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_7
+      name: ElectricTrapSpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 14863
-        y: 2574
-        width: 485
-        height: 1297
+        x: 6046
+        y: 0
+        width: 977
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33ce5869994f4f65b7919131dfcaea4
-      internalID: 642990798581588820
+      spriteID: 2dd7ca17e5fea4c6b85f5aaf57dd7100
+      internalID: -7587846074829528342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_8
+      name: ElectricTrapSpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 715
-        y: 574
-        width: 484
-        height: 1289
+        x: 7097
+        y: 0
+        width: 833
+        height: 1000
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c55f3550c62c4eedb722143d5c7260f
-      internalID: -2963264815411353607
+      spriteID: af39c31e2ed78401cb56fa7d0eb77ec4
+      internalID: 5956972272798416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_9
+      name: ElectricTrapSpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 2777
-        y: 582
-        width: 485
-        height: 1297
+        x: 3975
+        y: 393
+        width: 46
+        height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95b9fb723e1a644148805551e347948d
-      internalID: -1192289379952341297
+      spriteID: 9d84ecf6a37c94506b36a70958cdb87c
+      internalID: -1977697769094404308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_10
+      name: ElectricTrapSpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 4793
-        y: 574
-        width: 484
-        height: 1289
+        x: 5951
+        y: 373
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75aae2ecdbe3c4ddcb7114a3fbb23431
-      internalID: 6432306795554046407
+      spriteID: 59d0e7ee2a60e4fbcb6d59b9fc80ac55
+      internalID: -5484501550466122254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_11
+      name: ElectricTrapSpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 6746
-        y: 574
-        width: 484
-        height: 1289
+        x: 5975
+        y: 377
+        width: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a68800edc2aa4b0ba1a61c23f215020
-      internalID: 314394560557812316
+      spriteID: e93477dc043eb4b8aa08ee993be33026
+      internalID: -3532148579710991897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_12
+      name: ElectricTrapSpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 9012
-        y: 582
-        width: 476
-        height: 1289
+        x: 5006
+        y: 365
+        width: 15
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b3f92961562d459c9f5a84aedc518c5
-      internalID: 3522252350970315453
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_13
-      rect:
-        serializedVersion: 2
-        x: 10887
-        y: 590
-        width: 484
-        height: 1289
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10c8da34bed6c4bcbb3310a29db4da26
-      internalID: -2919869273024891056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_14
-      rect:
-        serializedVersion: 2
-        x: 12879
-        y: 582
-        width: 476
-        height: 1289
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e93f367c2ca7f456293477b745e1bd9f
-      internalID: 1533193138015734841
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: WS_Hero_Idle_spritesheet_15
-      rect:
-        serializedVersion: 2
-        x: 14832
-        y: 574
-        width: 484
-        height: 1289
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1affc3c23189d4bcf8fa800a4509f49e
-      internalID: 3018213333045869847
+      spriteID: 3b6bd91015538493e98e60b22ea5b9c9
+      internalID: -3001664178699906839
       vertices: []
       indices: 
       edges: []
@@ -472,7 +400,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: ac51517a8fc5d4b32a75380fbb5c7a5e
+    spriteID: 46bc1b4c422ee49a2a837e63aaa74034
     internalID: 0
     vertices: []
     indices: 
