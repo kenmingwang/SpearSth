@@ -11,7 +11,10 @@ public class GameManager : MonoBehaviour
     public GameObject Canvas;
     public GameObject curCameraPos;
     public GameObject QuitDialog;
+    public GameObject PauseDialog;
+
     private bool ActiveDialog = false;
+    private bool GamePaused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +59,17 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         }
+        if (Input.GetKey(KeyCode.Tab) && GamePaused == false)
+        {
+            PauseGame();
+
+            PauseDialog.SetActive(true);
+            GamePaused = true;
+        }
+
+
+
+
     }
 
     public void NextStage()
@@ -71,5 +85,21 @@ public class GameManager : MonoBehaviour
     private void ContinueGame()
     {
         Time.timeScale = 1;
+    }
+
+    public void Continue()
+    {
+
+        PauseDialog.SetActive(false);
+        GamePaused = false;
+        Time.timeScale = 1;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void OnQuit()
+    {
+        Application.Quit();
     }
 }
