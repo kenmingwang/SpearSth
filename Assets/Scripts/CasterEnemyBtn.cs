@@ -15,8 +15,6 @@ public class CasterEnemyBtn : MonoBehaviour
     public Animation anim;
     public Material hitShader;
     public Material normalShader;
-    public Sprite BtnClosed;
-    private Sprite BtnOpen;
 
     private Renderer rend_one;
     private Renderer rend_two;
@@ -36,7 +34,6 @@ public class CasterEnemyBtn : MonoBehaviour
         countDown = 10f;
         spwanCountDown = 2f;
         castCounDown = 3f;
-        BtnOpen = btn_one.GetComponent<SpriteRenderer>().sprite;
         
     }
 
@@ -65,14 +62,14 @@ public class CasterEnemyBtn : MonoBehaviour
         if (btn == btn_one && !btn_one_hit)
         {
             btn_one_hit = true;
-            btn_one.GetComponent<SpriteRenderer>().sprite = BtnClosed;
+            rend_one.material = hitShader;
             hit = true;
             counter++;
         }  
         else if(btn == btn_two && !btn_two_hit)
         {
             btn_two_hit = true;
-            btn_two.GetComponent<SpriteRenderer>().sprite = BtnClosed;
+            rend_two.material = hitShader;
             hit = true;
             counter++;
         }
@@ -91,8 +88,8 @@ public class CasterEnemyBtn : MonoBehaviour
 
     private void ResetBtn()
     {
-        btn_one.GetComponent<SpriteRenderer>().sprite = BtnOpen;
-        btn_two.GetComponent<SpriteRenderer>().sprite = BtnOpen;
+        rend_one.material = normalShader;
+        rend_two.material = normalShader;
         btn_one_hit = false;
         btn_two_hit = false;
         countDown = 5f;
