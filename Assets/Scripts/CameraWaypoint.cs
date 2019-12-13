@@ -91,12 +91,12 @@ public class CameraWaypoint : MonoBehaviour
             if (nearNext && playerNearPrev)
             {
                 camera.transform.Translate(newX, newY, 0.0f);
-                gameManager.GetComponent<GameManager>().curCameraPos = nextCameraPos;
+                camera.GetComponent<GameManager>().curCameraPos = nextCameraPos;
             }
             else if (nearPrev && !playerNearPrev)
             {
                 camera.transform.Translate(-newX, -newY, 0.0f);
-                gameManager.GetComponent<GameManager>().curCameraPos = prevCameraPos;
+                camera.GetComponent<GameManager>().curCameraPos = prevCameraPos;
             }
         }
     }
