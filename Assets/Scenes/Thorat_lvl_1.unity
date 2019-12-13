@@ -3225,7 +3225,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6536192832633946469, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}
     - {fileID: 6556991259021842449, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}
 --- !u!1 &237272482
@@ -13867,6 +13866,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1708204201309612900, guid: 85fcf8262dca14bb297d075e8b924c26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1708204201309612901, guid: 85fcf8262dca14bb297d075e8b924c26,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13916,11 +13920,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1708204201309612900, guid: 85fcf8262dca14bb297d075e8b924c26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85fcf8262dca14bb297d075e8b924c26, type: 3}
