@@ -11946,6 +11946,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: MegaCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 2272920894757093661, guid: c927d2b68a3335f4e9270c8766154e10,
+        type: 3}
+      propertyPath: QuitDialog
+      value: 
+      objectReference: {fileID: 1221845539}
+    - target: {fileID: 2272920894757093661, guid: c927d2b68a3335f4e9270c8766154e10,
+        type: 3}
+      propertyPath: Canvas
+      value: 
+      objectReference: {fileID: 330978687}
     - target: {fileID: 1660265039893820157, guid: c927d2b68a3335f4e9270c8766154e10,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43018,11 +43028,6 @@ PrefabInstance:
       propertyPath: QuitDialog
       value: 
       objectReference: {fileID: 1221845539}
-    - target: {fileID: 6942913847557883115, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
-        type: 3}
-      propertyPath: maxHealth
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6556991258934261782, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
         type: 3}
       propertyPath: m_BodyType
@@ -43032,6 +43037,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 0.9760738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6942913847557883115, guid: a9e448ebb1ae2404fbf7fa0a6f03283d,
+        type: 3}
+      propertyPath: maxHealth
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6536192832633946469, guid: a9e448ebb1ae2404fbf7fa0a6f03283d, type: 3}

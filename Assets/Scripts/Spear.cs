@@ -108,7 +108,11 @@ public class Spear : MonoBehaviour
             isThrowTriggered = false;
             GetComponent<BoxCollider2D>().offset = new Vector2(0f, 0.2f);
             GetComponent<BoxCollider2D>().size = new Vector2(8f, 0.5f);
-            GameObject.Find("Caster").GetComponent<CasterEnemyBtn>().BtnHit(collision.gameObject);
+            //added the if/else statement to handle hitting the buttons after the caster is dead
+            if (GameObject.Find("Caster") != null)
+            {
+                GameObject.Find("Caster").GetComponent<CasterEnemyBtn>().BtnHit(collision.gameObject);
+            }
         }
 
     }
