@@ -115,6 +115,11 @@ public class CasterEnemyBtn : MonoBehaviour
     private void SpawnEnemy()
     {
         spwanCountDown -= Time.deltaTime;
+        var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if(enemies.Length > 4)
+        {
+            return;
+        }
         if (spwanCountDown < 0)
         {
             spwanCountDown = 2f;
@@ -127,5 +132,10 @@ public class CasterEnemyBtn : MonoBehaviour
                 casting = false;
             }
         }
+    }
+
+    public void DecrementAliveEnemey()
+    {
+        spawnCounter--;
     }
 }
