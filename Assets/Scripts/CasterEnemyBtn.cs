@@ -116,18 +116,19 @@ public class CasterEnemyBtn : MonoBehaviour
     {
         spwanCountDown -= Time.deltaTime;
         var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if(enemies.Length > 4)
+        if(enemies.Length > 2)
         {
+            spwanCountDown = 3f;
             return;
         }
         if (spwanCountDown < 0)
         {
-            spwanCountDown = 2f;
-            Vector3 pos = new Vector3(SpawnDoor.transform.position.x, SpawnDoor.transform.position.y + 0.1f, SpawnDoor.transform.position.z);
+            spwanCountDown = 3f;
+            Vector3 pos = new Vector3(SpawnDoor.transform.position.x, SpawnDoor.transform.position.y + 0.15f, SpawnDoor.transform.position.z);
 
             Instantiate(Enemy, pos, new Quaternion());
 
-            if (++spawnCounter > 5)
+            if (++spawnCounter > 3)
             {
                 casting = false;
             }

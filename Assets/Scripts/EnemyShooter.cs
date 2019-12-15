@@ -124,6 +124,7 @@ public class EnemyShooter : MonoBehaviour
             timeLeft -= Time.deltaTime;
             if (timeLeft < 0)
             {
+                Debug.Log("Transport");
                 transform.position = p.transform.position + offset;
                 timeLeft = transportPeriod;
             }
