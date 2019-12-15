@@ -115,6 +115,7 @@ public class HealthSystem : MonoBehaviour
         if (name == "ShooterEnemy")
         {
             gameObj.GetComponent<EnemyShooter>().Die();
+            GameObject.Find("NextDialog").SetActive(true);
         }
         if(name == "Player")
         {

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public GameObject curCameraPos;
     public GameObject QuitDialog;
     public GameObject PauseDialog;
+    public GameObject NextDialog;
 
     private bool ActiveDialog = false;
     private bool GamePaused = false;
@@ -34,7 +35,6 @@ public class GameManager : MonoBehaviour
         {
             PauseGame();
             Debug.Log(curCameraPos.transform.position);
-            QuitDialog.transform.position = curCameraPos.transform.position + new Vector3(0, 0, 1);
             QuitDialog.SetActive(true);
             ActiveDialog = true;
         }
@@ -101,5 +101,10 @@ public class GameManager : MonoBehaviour
     public void OnQuit()
     {
         Application.Quit();
+    }
+
+    public void NextDialoga()
+    {
+        NextDialog.SetActive(true);
     }
 }
