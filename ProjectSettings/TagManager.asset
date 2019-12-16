@@ -24,7 +24,7 @@ TagManager:
   - 
   - ground
   - movingground
-  - 
+  - particle
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: particle
+    uniqueID: 2610630289
     locked: 0

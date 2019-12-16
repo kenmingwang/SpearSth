@@ -14752,7 +14752,7 @@ GameObject:
   - component: {fileID: 1783342817}
   - component: {fileID: 1783342816}
   m_Layer: 0
-  m_Name: Sprite - StP
+  m_Name: PauseBG - StP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29378,7 +29378,7 @@ GameObject:
   - component: {fileID: 2094785323}
   - component: {fileID: 2094785322}
   m_Layer: 0
-  m_Name: Sprite - StP
+  m_Name: LOGO - StP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
