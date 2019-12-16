@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     private bool ActiveDialog = false;
     private bool GamePaused = false;
+    private bool ActiveNext = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +67,18 @@ public class GameManager : MonoBehaviour
             PauseDialog.SetActive(true);
             GamePaused = true;
         }
+        if(ActiveNext && Input.GetKeyDown(KeyCode.N))
+        {
+            ActiveNext = false;
+            if(SceneManager.GetActiveScene().name != "Level_2")
+            {
+                NextStage();
+            }
+            else
+            {
+                SceneManager.LoadScene("main_menu_UI");
+            }
+        }
 
 
 
@@ -106,5 +119,7 @@ public class GameManager : MonoBehaviour
     public void NextDialoga()
     {
         NextDialog.SetActive(true);
+        ActiveNext = true;
+
     }
 }

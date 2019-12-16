@@ -115,11 +115,15 @@ public class HealthSystem : MonoBehaviour
         if (name == "ShooterEnemy")
         {
             gameObj.GetComponent<EnemyShooter>().Die();
-            GameObject.Find("NextDialog").SetActive(true);
+            GameObject.Find("MegaCamera").GetComponent<GameManager>().NextDialoga();
         }
         if(name == "Player")
         {
             gameObj.GetComponent<PhysicsPlayer>().Die();
+        }
+        if(name == "Caster")
+        {
+            GameObject.Find("MegaCamera").GetComponent<GameManager>().NextDialoga();
         }
         Destroy(gameObj, 2f);
         Destroy(hbarObj, 2f);
